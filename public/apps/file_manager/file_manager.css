@@ -1,0 +1,97 @@
+.file_manager_container{
+	padding-top: 1px;
+}
+
+.file_browser_toolbar {
+	z-index: 1;
+	padding: 5px;
+	/*margin-top: 5px;*/
+	height: 32px;
+	position: fixed;
+	background-color: rgba(23,25,22,.9); 
+}
+.file_browser_toolbar_button {
+	float: left; margin-right: 5px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.file_folder_input {
+	width: 220px;
+	margin: 5px;
+}
+.file_tree_container{
+	width: 100% !important;
+	padding-top: 40px;
+}
+.file_browser_main {
+	width: 100%;
+	height: 100%;
+}
+
+.ztree li a {
+	color: #FFF !important;
+}
+
+
+/*ztree edits */
+
+.ztree li a {
+	width: calc(100% - 20px);
+}
+
+.ztree li a:hover {
+	text-decoration:underline;
+	background-color:#464646;
+}
+
+.ztree li a.curSelectedNode {
+	padding-top:0px;
+	background-color:#37ABC8; 
+	color:black; 
+	height:16px; 
+	border:0px #FFF solid; 
+	opacity:0.8;
+}
+
+.file_manager_drop {
+	z-index: 99999;
+}
+
+.file_manager_delete_buttons {
+	height: 20px;
+}
+
+.file_manager_delete_button_left {
+	float: left;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.file_manager_delete_button_right {
+	float: right;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.file_manager_upload_input {
+	width: 300px;
+	float: left;
+	margin: 5px;
+}
+
+.file_manager_upload_button {
+	height: 28px;
+	margin: 5px;
+	float: left;
+	padding-top: 3px !important;
+	padding-bottom: 3px !important;
+}
+
+.upload_file_popup {
+	height: 40px;
+}
+
+.file_manager_upload_wait {
+	float: left;
+	margin: 5px;
+}

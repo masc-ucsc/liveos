@@ -1,0 +1,6 @@
+{
+  "host":"localhost",
+  "server":"localhost",
+  "core_count":4,
+  "is_local":1
+}

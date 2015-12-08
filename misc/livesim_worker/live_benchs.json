@@ -1,0 +1,33 @@
+{
+  "server":"localhost",
+  "ncheckpoints":"100",
+  "nskip":"0",
+  "benchmarks":{
+    "perlbench": {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_perlbench.mips64 -I./data/spec06/400.perlbench/lib data/spec06/400.perlbench/checkspam.pl 2500 5 25 11 150 1 1 1 1"},
+    "bzip2":     {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_bzip2.mips64 data/spec06/401.bzip2/input.combined"},
+    "gcc":       {"ncheckpoints":"100", "ninst":"35e9", "env_var":"bins/spec06_gcc.mips64 data/spec06/403.gcc/166.i"},
+    "bwaves":    {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_bwaves.mips64"},
+    "gamess":    {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_gamess.mips64", "stdin":"./data/spec06/416.gamess/cyto.stdin"},
+    "mcf":       {"ncheckpoints":"100", "ninst":"15e9", "env_var":"bins/spec06_mcf.mips64 1 data/spec06/429.mcf/inp.in"},
+    "milc":      {"ncheckpoints":"100", "ninst":"40e9", "env_var":"bins/spec06_milc.mips64 data/spec06/433.milc/su3imp.in"},
+    "zeusmp":    {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_zeusmp.mips64"},
+    "gromacs":   {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_gromacs.mips64 -deffnm data/spec06/435.gromacs/gromacs.tpr -nice 0"},
+    "namd":      {"ncheckpoints":"100", "ninst":"65e9", "env_var":"bins/spec06_namd.mips64 --input data/spec06/444.namd/namd.input --iterations 38"},  
+    "gobmk":     {"ncheckpoints":"100", "ninst":"40e9", "env_var":"bins/spec06_gobmk.mips64 --quiet --mode gtp --gtp-input data/spec06/445.gobmk/13x13.tst"},
+    "dealII":    {"ncheckpoints":"100", "ninst":"40e9", "env_var":"bins/spec06_dealII.mips64 99"},
+    "soplex":    {"ncheckpoints":"100", "ninst":"30e9", "env_var":"bins/spec06_soplex.mips64 -s1 -e -m45000 data/spec06/450.soplex/pds-50.mps"},
+    "povray":    {"ncheckpoints":"100", "ninst":"70e9", "env_var":"bins/spec06_povray.mips64 -L./data/spec06/453.povray data/spec06/453.povray/SPEC-benchmark-ref.ini"},
+    "calculix":  {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_calculix.mips64 -i data/spec06/454.calculix/hyperviscoplastic"},
+    "hmmer":     {"ncheckpoints":"100", "ninst":"70e9", "env_var":"bins/spec06_hmmer.mips64 data/spec06/456.hmmer/nph3.hmm data/spec06/456.hmmer/swiss41"},
+    "sjeng":     {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_sjeng.mips64 data/spec06/458.sjeng/ref.txt"},
+    "gemsfdtd":  {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_GemsFDTD.mips64"}, 
+    "libquantum":{"ncheckpoints":"100", "ninst":"70e9", "env_var":"bins/spec06_libquantum.mips64 1397 8"},  
+    "h264ref":   {"ncheckpoints":"100", "ninst":"90e9", "env_var":"bins/spec06_h264ref.mips64 -d data/spec06/464.h264ref/foreman_ref_encoder_baseline.cfg"},
+    "tono":      {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_tonto.mips64"},
+    "lbm":       {"ncheckpoints":"100", "ninst":"50e9", "env_var":"bins/spec06_lbm.mips64 3000 0 0 data/spec06/470.lbm/100_100_130_ldc.of"},
+    "omnetpp":   {"ncheckpoints":"100", "ninst":"40e9", "env_var":"bins/spec06_omnetpp.mips64 -f data/spec06/471.omnetpp/omnetpp.ini"},
+    "astar":     {"ncheckpoints":"100", "ninst":"30e9", "env_var":"bins/spec06_astar.mips64 data/spec06/473.astar/BigLakes2048.cfg"},
+    "sphinx3":   {"ncheckpoints":"100", "ninst":"55e9", "env_var":"bins/spec06_sphinx.mips64 data/spec06/482.sphinx/ctl data/spec06/482.sphinx/raw/ data/spec06/482.sphinx/args.an4"},
+    "xalancbmk": {"ncheckpoints":"100", "ninst":"25e9", "env_var":"bins/spec06_xalan.mips64 data/spec06/483.xalancbmk/t5.xml data/spec06/483.xalancbmk/xalanc.xsl"}
+  }
+}

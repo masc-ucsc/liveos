@@ -1,0 +1,3 @@
+[submodule "public/libs/codemirror"]
+	path = public/libs/codemirror
+	url = https://github.com/codemirror/codemirror

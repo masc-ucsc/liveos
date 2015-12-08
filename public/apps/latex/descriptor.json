@@ -1,0 +1,10 @@
+{
+  "name": "latex",
+  "title": "LaTeX",
+  "main_class": "latex_client",
+  "js_files": ["latex_client.js"],
+  "css_files": ["latex_client.css"],
+  "menu": "apps",
+  "menu_order": 1,
+  "shortcut": "alt l"
+}

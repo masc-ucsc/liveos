@@ -1,0 +1,28 @@
+{
+    "shortcuts":{
+        "synthesis":{"title":"Synthesis","function":"synthesis.open()"},
+        "terminal":{"title":"Terminal","function":"open_terminal()"},
+        "maximize":{"title":"Maximize Window","function":"maximize_window()"},
+        "cascade":{"title":"Cascade Windows","function":"wm.cascade()"},
+        "close":{"title":"Close Window","function":"close_cur_window()"},
+        "tile":{"title":"Tile/Float","function":"toggle_tile()"},
+        "default_tile":{"title":"Tile All","function":"default_tile()"},
+        "tile_dir":{"title":"Toggle Direction","function":"tile_dir()"},
+        "focus_right":{"title":"Focus Right","function":"focus_right()"},
+        "focus_left":{"title":"Focus Left","function":"focus_left()"},
+        "focus_up":{"title":"Focus Up","function":"focus_up()"},
+        "focus_down":{"title":"Focus Down","function":"focus_down()"},
+        "swap_left":{"title":"Swap Right","function":"swap_left()"},
+        "swap_right":{"title":"Swap Left","function":"swap_right()"},
+        "swap_up":{"title":"Swap Up","function":"swap_up()"},
+        "swap_down":{"title":"Swap Down","function":"swap_down()"},
+        "help":{"title":"Help","function":"help()"},
+        "tile_right":{"title":"Tile Right","function":"tile_right()"},
+        "tile_left":{"title":"Tile Left","function":"tile_left()"},
+        "tile_up":{"title":"Tile Right","function":"tile_up()"},
+        "tile_down":{"title":"Tile Right","function":"tile_down()"},
+        "session_test":{"title":"Session Test","function":"session_test()"},
+        "session_test_get":{"title":"Session Test Get","function":"session_test_get()"},
+        "set_session":{"title":"Session Test Set","function":"set_session()"}
+    }
+}

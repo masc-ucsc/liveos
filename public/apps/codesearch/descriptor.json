@@ -1,0 +1,10 @@
+{
+  "name": "codesearch",
+  "title": "Code Search",
+  "main_class": "codesearch_client",
+  "js_files": ["codesearch_client.js"],
+  "css_files": ["codesearch_client.css"],
+  "menu": "apps",
+  "menu_order": 0,
+  "shortcut": "alt /"
+}

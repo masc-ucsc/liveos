@@ -1,0 +1,9 @@
+{
+  "name": "chat",
+  "title": "Chat",
+  "main_class": "chat_client",
+  "js_files": ["chat_client.js"],
+  "css_files": ["chat_client.css"],
+  "menu": "",
+  "shortcut": ""
+}

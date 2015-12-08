@@ -1,0 +1,11 @@
+.hello_container {
+  height:100%;
+  padding: 1px;
+}
+.hello_message {
+  margin: auto;
+  margin-top: 160px;
+  font-size: 16pt;
+  width: 120px;
+  height: 40px;
+}

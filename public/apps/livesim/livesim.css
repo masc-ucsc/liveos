@@ -1,0 +1,249 @@
+.livesim_container {
+  width: 100%;
+  height: 100%;
+}
+.livesim_toolbar_button {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.livesim_top_bar {
+  clear: both;
+  width: calc(100% - 32px);
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.multiselect {
+  text-align: left;
+  font-size: 10pt;
+  padding: 2px;
+}
+
+.multiselect b.caret {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+
+.livesim_topbar_label {
+  margin-right: 5px;
+}
+
+.livesim_status_bar {
+  margin: 10px;
+  float: left;
+  width: auto;
+  cursor: pointer;
+}
+
+.livesim_plot_el_container {
+  height: calc(100% - 126px);
+  width: calc(100% - 40px);
+  float: left;
+}
+
+.livesim_plot_el_container2 {
+  height: calc(100% - 140px);
+  width: calc(100% - 140px);
+  float: left;
+}
+
+.livesim_legend_container {
+  width: 100px;
+  margin: 10px;
+  float: left;
+}
+
+.livesim_legend_item {
+  overflow: auto;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.livesim_plot {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.epoch .axis path, .epoch .axis line {
+  stroke: #fff;
+}
+
+.epoch text {
+  stroke: #fff;
+}
+
+.livesim_settings_container {
+  
+}
+
+.livesim_field_container {
+  margin-bottom: 10px;
+}
+
+.livesim_field_label {
+  width: 170px;
+}
+
+.livesim_benchmark_container {
+  width: 700px;
+  overflow: auto;
+}
+
+.livesim_benchmark_option_container {
+  width: 180px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.livesim_select_container {
+  float: left;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.livesim_history_button_container {
+  float: left;
+  height: 24px;
+  width: calc(100% - 360px);
+  margin-right: 10px;
+  margin-bottom: 12px;
+}
+
+.livesim_history_button {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.epoch_bar_ci {
+  fill: none;
+  stroke: #FF0077;
+  stroke-width: 2;
+}
+
+.livesim_history_container {
+  height: 100%;
+}
+
+.livesim_history_item {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 24px;
+  padding: 2px;
+  padding-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  /*background-color: #aaa;*/
+}
+
+.livesim_history_item:hover {
+  background-color: #464646;
+}
+
+.livesim_history_list {
+  overflow: hidden;
+  height: calc(100% - 40px);
+}
+
+.livesim_history_input {
+  margin: 5px;
+  height: 28px;
+  width: calc(100% - 32px);
+  background-color: #252525;
+  border-style: solid;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+}
+
+.livesim_compare_container {
+  height: 100%;
+}
+
+.livesim_compare_item {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 24px;
+  padding: 2px;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+.livesim_compare_list {
+  overflow: hidden;
+  height: 300px;
+}
+
+.livesim_compare_input {
+  margin: 5px;
+  height: 28px;
+  width: calc(100% - 10px);
+  background-color: #252525;
+  border-style: solid;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+}
+
+.livesim_comparable_option_label {
+  font-weight: normal;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.livesim_comparable_option_checkbox {
+  
+}
+
+.livesim_drop {
+  z-index: 99999;
+  max-width: 580px !important;
+}
+
+.livesim_drop_content {
+  max-width: 580px !important;
+  word-wrap: break-word;
+}
+
+.livesim_clear {
+  clear: both;
+}
+
+.livesim_settings_field {
+  width: 200px;
+}
+
+.livesim_field_itself {
+  width: 180px;
+}
+
+.livesim_settings_select {
+  width: 177px;
+}
+
+.livesim_conf_container {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.livesim_tab {
+  
+}
+
+.livesim_stats td {
+  width: 100px;
+}

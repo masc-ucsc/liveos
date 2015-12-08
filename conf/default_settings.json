@@ -1,0 +1,30 @@
+{
+  "user_editor_mode":"sublime",
+  "user_editor_theme":"liveos-dark",
+  "user_scuts":{
+    "synthesis":"alt h",
+    "terminal":"alt t",
+    "maximize":"alt m",
+    "cascade":"alt c",
+    "close":"alt z",
+    "tile":"meta t",
+    "default_tile":"meta shift t",
+    "tile_dir":"meta h",
+    "focus_right":"meta right",
+    "focus_left":"meta left",
+    "focus_up":"meta up",
+    "focus_down":"meta down",
+    "swap_left":"meta ctrl right",
+    "swap_right":"meta ctrl left",
+    "swap_up":"meta ctrl up",
+    "swap_down":"meta ctrl down",
+	"help":"meta ?",
+    "tile_right":"alt right",
+    "tile_left":"alt left",
+    "tile_up":"alt up",
+    "tile_down":"alt down",
+    "session_test":"ctrl x",
+    "session_test_get":"ctrl z",
+    "set_session":"ctrl q"
+  }
+}

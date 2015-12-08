@@ -1,0 +1,9 @@
+{
+  "name": "markdown",
+  "title": "Markdown",
+  "main_class": "markdown_client",
+  "js_files": ["markdown.js"],
+  "css_files": ["markdown.css"],
+  "menu": "",
+  "shortcut": ""
+}

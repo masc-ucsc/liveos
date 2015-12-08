@@ -1,0 +1,27 @@
+.pdf_viewer {
+  width: 100%;
+  height: calc(100% - 36px);
+  border: none;
+}
+.latex_container {
+  height:100%;
+  padding: 1px;
+}
+.latex_source_input {
+  height: 28px;
+  width: 100%;
+  background-color: #252525;
+  border-style: solid;
+  bottom: 10px;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+}
+.latex_error_container {
+  position: absolute;
+  top: 30px;
+  margin: 1px;
+  width: (100% - 1px);
+}

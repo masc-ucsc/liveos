@@ -1,0 +1,111 @@
+body {
+  background:  url(../../img/logo.png) no-repeat, -webkit-gradient(radial, center, from(#222), to(#000));
+  background:  url(../../img/logo.png) no-repeat, -webkit-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -moz-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -ms-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -o-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -radial-gradient(center,#222,#000);
+  background-position: center; 
+  background-attachment: fixed;
+	color: #ddd;
+}
+.head-bar{
+	width: 100%;
+	height: 28px;
+	background-color: #E6E6E6;
+	float: top;
+}
+.head-bar-button{
+	position: relative;
+	cursor: pointer;
+	height: 100%;
+	vertical-align: middle;
+	display: block;
+	width: 28px;
+}
+.head-bar-button-right{
+	float: right;
+}
+.head-bar-button-left{
+	float: left;
+}
+.head-bar-button:hover {
+    background-color:#A4A4A4;
+}
+.head-bar-button-img{
+	margin: 2px;
+}
+.project-selection-container{
+	width: 480px;
+	background-color: #eee;
+	color: #000;
+	margin-top: 120px;
+	/*border-style: solid;
+	border-width: 3px;
+	border-color: #000;
+	border-radius: 10px;*/
+	margin-left:auto;
+	margin-right:auto
+}
+.project_container {
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.project_container:hover {
+	background-color: #111310;
+}
+.project_name {
+	font-size: 16pt;
+	font-weight: bold;	
+	cursor: pointer;
+	color: #199EB8;
+	float: left;
+}
+.project_name:hover {
+	/*text-decoration: underline;*/
+	color: #199EB8;
+}
+.project_container_title
+{
+	margin: 10px;
+	font-size: 20pt;
+	font-weight: bold;
+	color:#ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+.new_project {
+	float: right;
+	margin-right: 10px;
+	
+}
+.project_container_head {
+	overflow: hidden;
+
+	box-shadow: 2px 2px 3px #111111;
+	background: -webkit-linear-gradient(#131512, #222421, #131512); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#131512, #222421, #131512); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#131512, #222421, #131512); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#131512, #222421, #131512); /* Standard syntax */
+
+	padding-bottom: 10px;
+
+}
+
+.search_new_project{
+	width: calc(100% - 54px);
+	height: 32px !important;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#add_new_project{
+	width: 27px;
+	height: 27px;
+}
+
+.logout_button {
+	float: right;
+}

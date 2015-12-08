@@ -1,0 +1,287 @@
+.JSWM_manager
+{
+  width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.JSWM_window
+{
+	/*position: absolute;
+	line-height: 50%;*/
+  background: #000000;
+	box-shadow: 1px 1px 5px #000;
+}
+
+
+.JSWM_window_active{
+	/*border: 1px solid #76CDE3;*/
+	box-shadow: 1px 1px 15px #000;
+}
+
+.JSWM_window_handle
+{
+	height: 0px;
+	line-height: 20px;
+	width: 0px !important;
+
+	background: #131512;
+	color: #131512;
+	background-color: #131512;
+	border-color: #131512;
+	float: right;
+}
+
+.JSWM_button
+{
+    cursor: pointer;
+}
+
+.JSWM_iframe
+{
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.JSWM_window_active .JSWM_window_handle
+{
+	background: #131512; 
+ 	color: #131512; 
+}
+
+.JSWM_window_maximised .JSWM_window_handle
+{
+	border-width: 0 0 1px 0;
+}
+
+.JSWM_window_title
+{
+	background: 2px 50% no-repeat;
+	overflow: hidden;
+	height: 100%;
+	cursor: default;
+	white-space: nowrap;
+	padding-left: 0px;
+}
+
+.JSWM_window_title span
+{
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+.JSWM_window_handle_right
+{
+	float: right;
+	margin: 2px;
+	margin-bottom: 0;
+}
+
+.JSWM_window_handle_right img
+{
+	height: auto;
+}
+
+.JSWM_window_contents
+{
+	border: 1px solid;
+	border-left-color: #222421;
+ 	border-top-color: #222421; 
+ 	border-right-color: #131512; 
+ 	border-bottom-color: #131512; 
+}
+
+.JSWM_window_maximised .JSWM_window_contents
+{
+	border-width: 1px 0 0 0;
+}
+
+.JSWM_window_tab
+{
+	overflow: auto;
+	position: relative;
+
+	color:#ffffff;
+	/*border: 1px solid #76CDE3;*/
+	border: 1px solid #131512;
+  background: #eeeeff;
+	background: -webkit-linear-gradient(#131512, #222421, #131512); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#131512, #222421, #131512); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#131512, #222421, #131512); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#131512, #222421, #131512); /* Standard syntax */
+}
+
+.JSWM_window_selected .JSWM_window_tab{
+	border: 1px solid #E5E4E2;
+}
+
+.JSWM_window_active .JSWM_window_tab{
+	border: 1px solid #76CDE3;
+}
+
+.JSWM_window_resize
+{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: url('images/dot.png'); /* hack to stop IE throwing away empty DIVs */
+	font-size: 1px;
+}
+
+.JSWM_window_resizeNW
+{
+  cursor: nw-resize;
+}
+
+.JSWM_window_resizeNE
+{
+  cursor: ne-resize;
+}
+
+.JSWM_window_resizeSW
+{
+  cursor: sw-resize;
+	/*top: calc(100% - 10px); !important;*/
+}
+
+.JSWM_window_resizeSE
+{
+  cursor: se-resize;
+	/*top: calc(100% - 10px) !important;*/
+}
+
+.JSWM_tabList
+{
+    position: static;
+	height: 29px;
+	border-bottom: 1px solid;
+	padding: 0;
+	margin: 0;
+}
+
+.JSWM_tabButton
+{
+	height: 20px;
+	cursor: default;
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	border: 1px solid;
+}
+
+.JSWM_tabLabel
+{
+	line-height: 20px;
+	height: 100%;
+	font-size: 14px;
+	padding: 0 2px 0 20px;
+	background: 2px 50% no-repeat;
+	cursor: default;
+	white-space: nowrap;
+}
+
+.JSWM_tabButton_active
+{
+	border-bottom: 1px solid;
+}
+
+.JSWM_tabButton_active .JSWM_tabLabel
+{
+}
+
+.JSWM_tabClose
+{
+	float: right;
+	margin: 3px 1px;
+}
+
+.JSWM_lineclear
+{
+	clear: both;
+}
+
+/* Shadow */
+.JSWM_shadow_container
+{
+	position: relative;
+}
+
+.JSWM_window_maximised .JSWM_shadow_container
+{
+	display: none;
+}
+
+.meta_container{
+		position: absolute;
+    background-color: black;
+    filter:alpha(opacity=50); /* IE */
+    opacity: 0.5; /* Safari, Opera */
+    -moz-opacity:0.50; /* FireFox */
+
+    z-index: 2000;
+		top: 2px;
+		left: 2px;
+    width: 350px;
+		height: 500px;
+
+}
+
+.JSWM_window_meta_resize{
+	/*border: 1px solid red;*/
+  z-index: 2001;
+}
+
+.JSWM_window_metaNW{
+	cursor: nw-resize;
+}
+.JSWM_window_metaNE{
+	cursor: ne-resize;
+}
+.JSWM_window_metaSW{
+	cursor: sw-resize;
+}
+.JSWM_window_metaSE{
+	cursor: se-resize;
+}
+
+.JSWM_window_metaN{
+	cursor: n-resize;
+}
+.JSWM_window_metaS{
+	cursor: s-resize;
+}
+.JSWM_window_metaW{
+	cursor: w-resize;
+}
+.JSWM_window_metaE{
+	cursor: e-resize;
+}
+.JSWM_window_metaC{
+	/*background-color: red;*/
+	z-index:2002;
+		color: #eee;
+		font-size: 40px;
+		text-align: center;
+}
+
+
+/*.JSWM_shadowNE, .JSWM_shadowSW, .JSWM_shadowSE, .JSWM_shadowS, .JSWM_shadowE
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+.JSWM_shadowNE {background: url('images/shadowNE.png') no-repeat;}
+.JSWM_shadowSW {background: url('images/shadowSW.png') no-repeat;}
+.JSWM_shadowSE {background: url('images/shadowSE.png') no-repeat;}
+.JSWM_shadowS  {background: url('images/shadowS.png') repeat-x; left: 6px;}
+.JSWM_shadowE  {background: url('images/shadowE.png') repeat-y; top: 6px;}
+*/
+

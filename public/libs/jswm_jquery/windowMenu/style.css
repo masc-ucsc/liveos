@@ -1,0 +1,113 @@
+/*css goes here*/
+
+/*/////////////////Multilevel Menu css/////////////////*/
+.JSWM_window_handle {
+	width: 40px; 
+	float: right;
+	position: absolute;
+	z-index: 2;
+	opacity:0;
+
+}
+
+.JSWM_window_handle button:hover,
+.JSWM_window_handle button.dl-active,
+.dl-trigger{
+	border: none;
+  padding: 0;
+	background: #bbbbbb;
+	float: right;
+	position: relative;
+	margin-right: 0px;
+	background: #37ABC8;
+
+}
+
+/*.JSWM_window_handle button:after {
+	/*content: '';*/
+	/*position: absolute;
+	width: 68%;
+	height: 5px;
+	background: #fff;
+	top: 10px;
+	left: 16%;
+	box-shadow: 
+		0 10px 0 #fff, 
+		0 20px 0 #fff;
+}
+
+.JSWM_window_handle button{
+	float: left;
+	position: relative;
+}*/
+
+.JSWM_window_handle:first-child {
+	margin-right: 160px;
+}
+
+.JSWM_window_handle li:hover{
+	background: #76CDE3;
+}
+
+.JSWM_window_handle ul {
+	padding: 0px; 
+	margin:0px; 
+	margin-left: -200px;
+	margin-top: 0px;
+	width: 200px;
+	list-style: none;
+	-webkit-padding-start: 0;
+	float: right;
+	max-height: 200px;
+	background: #37ABC8;
+	position: absolute;
+	top: 45px;
+
+}
+
+.JSWM_window_handle .sub_menu{
+	top: 0px;
+	margin-left: 0px;
+}
+
+.JSWM_window_handle li {
+	position: relative;
+}
+
+.JSWM_window_handle li a {
+	display: block;
+	position: relative;
+	padding: 10px 20px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #fff;
+	outline: none;
+	text-decoration: initial;
+}
+
+.JSWM_window_handle .backbtn {
+	background: #2C869D;
+
+}
+
+.JSWM_window_handle .menu_img{
+	/*margin-left: 19px;
+	height: 20px;
+	width: 20px;*/
+	margin: 5px;
+	margin-left: 12px;
+}
+
+.JSWM_window_handle .div_hover{
+	/*margin-left: 16px;*/
+	height: 20px;
+	width: 40px;
+	display: inline-block;
+
+}
+
+.JSWM_window_handle .icon_title{ 	 	
+		margin-right: 15px; 	 	
+	 	 	
+} 

@@ -1,0 +1,9 @@
+{
+  "name": "hello_world",
+  "title": "Hello World",
+  "main_class": "hello_world",
+  "js_files": ["hello_world.js"],
+  "css_files": ["hello_world.css"],
+  "menu": "",
+  "shortcut": ""
+}

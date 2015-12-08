@@ -1,0 +1,57 @@
+body {
+  padding-top: 50px;
+  color: #ccc;
+  font-size: 14pt;
+  overflow: hidden;
+  background:  url(../../img/logo.png) no-repeat, -webkit-gradient(radial, center, from(#222), to(#000));
+  background:  url(../../img/logo.png) no-repeat, -webkit-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -moz-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -ms-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -o-radial-gradient(center,#222,#000);
+  background:  url(../../img/logo.png) no-repeat, -radial-gradient(center,#222,#000);
+  background-position: center; 
+  background-attachment: fixed;
+}
+
+.index_button {
+  width: 200px;
+  margin: 10px;
+  color: #aaa !important;
+  text-decoration: none !important;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.signup_container {
+  width: 500px;
+  margin: 0 auto 0 auto;
+}
+
+.signup_field_name {
+  width: 160px;
+  display:inline-block;
+}
+
+.signup_field {
+  height: 22px !important;
+  margin: 5px;
+  width: 300px;
+}
+
+.signup_button {
+  width: 160px !important;
+  height: 36px !important;
+  color: #aaa !important;
+  margin-top: 20px !important;
+  font-size: 12pt;
+}
+
+.index_container {
+  margin-top: 50px;
+}

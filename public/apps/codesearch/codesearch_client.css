@@ -1,0 +1,132 @@
+.main_csearch_win {
+  height: 100%;
+  width: 100%;
+
+}
+
+.top_csearch_area{
+  height: 35px;
+  width: calc(100% - 3px);
+  border-style: solid;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  /*position:absolute;*/
+  top: 2px;
+  left: 2px;
+}
+
+
+.top_csearch_bar {
+  height: 28px;
+  width: calc(100% - 10px);
+  background-color: #252525;
+  border-style: solid;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  position:absolute;
+}
+
+.top_bar_alert_css {
+  margin-top:5px;
+  margin-right: 3px;
+  height: 18px;
+  width: 75px;
+  background-color: #880000;
+  border-style: 1px solid;
+  border-radius: 5px;
+  padding: 0px;
+  border: 1px solid #000000;
+  color: #ffffff;
+  float:right;
+  position:relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.top_bar_alert_busy_css {
+  margin-top:5px;
+  margin-right: 1px;
+  height: 18px;
+  width: 40px;
+  background-color: #909090;
+  border-style: 1px solid;
+  border-radius: 5px;
+  padding: 0px;
+  border: 1px solid #909090;
+  color: #ffffff;
+  float:right;
+  font-weight:bold;
+  position:relative;
+  text-align: center;
+  text-decoration: blink;
+}
+
+.source_input_cover {
+  height: 28px;
+  width: 100%;
+  background-color: #aaaaaa;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+}
+
+.csearch_results_window {
+  height: calc(100% - 45px); 
+  width: calc(100% - 3px);
+  padding: 5px;
+  position:absolute;
+  bottom: 2px;
+  left: 2px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  font-family: 'Ubuntu', Ubuntu Mono;
+  font-size: 14px;
+  white-space: pre;
+}
+.clearfix:after {
+    clear:both;
+    content:".";
+    display:block;
+    font-size:0;
+    height:0;
+    visibility:hidden;
+}
+.clearfix { display:block; }
+
+.csearch_filename_results{
+  width:100%;
+  padding: 5px;
+  white-space: pre;
+  color: #ffffff;
+  /*background:#303030;*/
+}
+
+.csearch_filename_results_kbselect{
+  width:100%;
+  padding: 5px;
+  white-space: pre;
+  color: #ffffff;
+  /*background:#303030;*/
+  background: #484848;
+  /*cursor: pointer;*/
+}
+
+
+.csearch_filename_results:hover{
+  /*color: black;*/
+  background: #484848;
+  cursor: pointer;
+}
+.csearch_filename_results:focus{
+  color: white;
+  background: #999999;
+}
+.selected{
+  color: black;
+  background: #bbbbbb;
+}

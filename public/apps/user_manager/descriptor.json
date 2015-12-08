@@ -1,0 +1,10 @@
+{
+  "name": "user_manager",
+  "title": "People",
+  "main_class": "user_client",
+  "js_files": ["user_manager.js"],
+  "css_files": ["user_manager.css"],
+  "menu": "main",
+  "menu_order": 2,
+  "shortcut": "alt p"
+}

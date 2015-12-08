@@ -1,0 +1,71 @@
+.editor_container {
+  	width: 100%;
+  	height: 100%;
+}
+.editor_wrapper {
+	border: solid;
+	border-color: #000;
+	height: 100%;
+}
+.editor_wrapper_admin {
+  border: solid;
+  border-color: #000;
+  height: calc(100% - 34px);
+}
+.editor_toolbar {
+
+}
+.editor_toolbar_button {
+	cursor: pointer;
+	margin: 2px;
+}
+/*li {
+	width: 120px;
+	height: 20px;
+} */
+.CodeMirror {
+  height: 100%;
+}
+
+/*Align window menu to top right*/
+.editor_container .JSWM_window_handle{
+	z-index: 1000;
+}
+
+.CodeMirror-lint-tooltip {
+	z-index: 99999 !important;
+}
+
+.editor_error_drop {
+  z-index: 99999;
+  max-width: 760px !important;
+}
+
+.editor_error_drop_content {
+  max-width: 756px !important;
+  word-wrap: break-word;
+}
+
+.editor_cursor_drop {
+  z-index: 99999;
+}
+
+.codemirror_cursor_custom {
+  padding: 5px;
+  border-radius: 2px;
+  z-index: 99999;
+}
+
+.editor_source_input {
+  height: 28px;
+  width: calc(100% - 6px);
+  background-color: #252525;
+  border-style: solid;
+  bottom: 10px;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+  margin: 3px;
+}
