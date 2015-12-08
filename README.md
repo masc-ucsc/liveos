@@ -1,7 +1,7 @@
 Installation
 =============
 First step is to clone the repository recursively so you get the submodules as well:
-* git clone https://github.com/masc-ucsc/liveos
+* git clone --recursive https://github.com/masc-ucsc/liveos
 
 Make sure the following packages are installed and updated on your system:
 * git
