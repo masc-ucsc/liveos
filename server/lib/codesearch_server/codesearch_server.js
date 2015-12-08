@@ -118,7 +118,7 @@ module.exports = function (main_path, io, ts, fsio) {
         file_last_modified = self.fs.statSync(self.source_folder + obj.file_id).mtime.getTime();
 
       } catch (err){
-        console.log("regeneration err, looking for a file OUTSIDE of /live/ide/files dir: " + err);
+        console.log("regeneration err, looking for a file OUTSIDE of /liveos/files dir: " + err);
 
       }
 
@@ -138,7 +138,7 @@ module.exports = function (main_path, io, ts, fsio) {
         file_just_modified = self.fs.statSync(self.source_folder + obj.file_id).mtime.getTime();
 
       } catch (err){
-        console.log("regeneration err, looking for a file OUTSIDE of /live/ide/files dir: " + err);
+        console.log("regeneration err, looking for a file OUTSIDE of /liveos/files dir: " + err);
 
       }
       console.log("FILE was being watched, OLD TS: " + touched_files_timestamp[index] + " NEW TS: " + file_just_modified);

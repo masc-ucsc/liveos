@@ -177,7 +177,7 @@ function codesearch_window(cc_parent, on_close)
 
       	try{
           if(self.help === true){
-            var absolute_file_path = self.help_path.substring(self.help_path.indexOf("/live/ide/") + 10) + "/Help";
+            var absolute_file_path = self.help_path.substring(self.help_path.indexOf("/liveos/") + 10) + "/Help";
             var path_id = "Help";
             if(e.shiftKey) apps.editor.open_file(absolute_file_path, path_id, self.number_open_on_enter[self.div_array_counter - 1], true);
             else{
@@ -401,7 +401,7 @@ function codesearch_window(cc_parent, on_close)
 
 						return function() { 
               if(self.help === true){
-                var absolute_file_path = self.help_path.substring(self.help_path.indexOf("/live/ide/") + 10) + "/Help";
+                var absolute_file_path = self.help_path.substring(self.help_path.indexOf("/liveos/") + 10) + "/Help";
                 var path_id = "Help";
                 apps.editor.open_file(absolute_file_path, path_id, current_split_nums[index_to_open], true);
               } else {

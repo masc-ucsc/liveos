@@ -456,7 +456,7 @@ self.socket.on("begin_syncing_repo", function(){
     
     self.grab_file_path = data; //captures the third printed line (0,1,2) from doing a "^C" in the terminal. This might change on different OSs
     
-    self.grab_file_path = self.grab_file_path.slice(self.grab_file_path.indexOf("/live/ide") + 9); //get the path relative to /files/ --- we dont want CM to open files outside of /live/ide
+    self.grab_file_path = self.grab_file_path.slice(self.grab_file_path.indexOf("/liveos") + 9); //get the path relative to /files/ --- we dont want CM to open files outside of /live/ide
 
     self.file_string = self.file_string.split(" "); //self.file_string[0] is garbage (" t"), [1] is the filename, [2] is the line number
 

@@ -1,6 +1,10 @@
 Installation
 =============
+First step is to clone the repository recursively so you get the submodules as well:
+* git clone https://github.com/masc-ucsc/liveos
+
 Make sure the following packages are installed and updated on your system:
+* git
 * nodejs
 * npm
 * mongodb
@@ -10,8 +14,7 @@ Make sure the following packages are installed and updated on your system:
 * go
 * the silver searcher (may need manual installation on some platforms)
 
-Once packages are installed, make sure you enable and start mongodb service. 
-Then run the following to install forever module:
+Once packages are installed, make sure you enable and start mongodb service. You may need to create /data/db directory on your system first. Then run the following to install forever module:
 * sudo npm install forever -g
 
 In case your Python version is newer than 3.0, switch it back using the following command:
@@ -33,6 +36,8 @@ This script, generate a directory named etc inside LiveOS home directory and cop
 
 Depending on the ports used for daemons, you may need to allow access to them in your firewall. In case of default configuration and ufw, you can set the following rule:
 * sudo ufw allow 8079:8090/tcp
+
+Once setup is done, exit shell and log back in.
 
 
 Setting Up Docker
@@ -66,6 +71,17 @@ You can also run each daemon individually by node or forever. Examples are:
 * forever -o logs/example.out -e logs/example.err start example_daemon.js
 
 Please note that the first daemon to run is server.js and the you can run the other ones. Logs and errors are stored in the logs folder per daemon process.
+
+
+Running LiveOS as a Docker Container
+====================================
+For convenience in setting up LiveOS, we have also created the docker image for it which can be pulled and run on any machine that has docker installed and set up. You can pul the LiveOS docker image by running the following:
+* docker pull mascucsc/liveos
+
+To create and run a container, run the following:
+* docker run -it --privileged -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083:8083 -p 8084:8084 -p 8085:8085 -p 8086:8086 mascucsc/liveos
+
+It may take a while to download and set up the container. Once LiveOS container is running, you are in a bash process inside the container. If you exit, the container stops. To exit the shell and keep the container running do Ctrl + P + Q. We have included the docker files and scripts  in misc/docker.
 
 
 Debugging

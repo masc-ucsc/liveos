@@ -91,7 +91,7 @@ module.exports = function (main_path, io, pty, ts, user, project, conf) {
         }
 
         //console.log("moddi: " + modified_path);
-        var main_ide_path = self.main_path.substring(self.main_path.indexOf("/live/ide") + 9);
+        var main_ide_path = self.main_path.substring(self.main_path.indexOf("/liveos") + 9);
 
         var holder_socket = self.open_terminals[obj.socket_env_var];
 
@@ -121,7 +121,7 @@ module.exports = function (main_path, io, pty, ts, user, project, conf) {
 
         var shared_docker_proj_id = obj.shared_proj_id;
 
-        var main_ide_path = self.main_path.substring(self.main_path.indexOf("/live/ide") + 9);
+        var main_ide_path = self.main_path.substring(self.main_path.indexOf("/liveos") + 9);
 
         var holder_socket = self.open_terminals[obj.socket_env_var];
         //need to fix the path here based on knowing the hard coded mounted path into the docker (the path the file is mounted to within the live)
@@ -133,7 +133,7 @@ module.exports = function (main_path, io, pty, ts, user, project, conf) {
       } else if (obj.term_type == "nondocker"){
 
         console.log(obj.path, obj.file_passed, obj.socket_env_var, obj.term_type);
-        var modified_path = obj.path.substring(obj.path.indexOf("/live/ide") + 9);
+        var modified_path = obj.path.substring(obj.path.indexOf("/liveos") + 9);
 
         var holder_socket = self.open_terminals[obj.socket_env_var];
 
