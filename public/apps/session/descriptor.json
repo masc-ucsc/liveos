@@ -1,0 +1,9 @@
+{
+  "name": "session",
+  "title": "Session Manager",
+  "main_class": "session_client",
+  "js_files": ["session_client.js"],
+  "css_files": [],
+  "menu": "",
+  "shortcut": ""
+}

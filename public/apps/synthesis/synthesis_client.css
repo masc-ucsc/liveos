@@ -1,0 +1,70 @@
+.graph_viewer {
+  width: 100%;
+  height: calc(100% - 36px);
+  border: none;
+  overflow: hidden;
+}
+.synth_container {
+  height:100%;
+  padding: 1px;
+  overflow: hidden;
+}
+.synth_source_input {
+  height: 28px;
+  width: 50%;
+  background-color: #FFFFFF;
+  border-style: solid;
+  bottom: 10px;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+  overflow: hidden;
+}
+.text_viewer {
+  height: 28px;
+  width: 50%;
+  background-color: #000000;
+  border-style: solid;
+  bottom: 10px;
+  border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+}
+.synth_error_container {
+  position: relative;
+  bottom: 20px;
+  margin: 1px;
+  width: 100%;
+  height: 20px;
+	background-color: #AA0000;
+}
+.synth_pane {
+  background-color: #202020;
+  color: #ffffff;
+  height: 40px;
+  width: 100px;
+  position: absolute;
+  opacity: 0.7;
+}
+.synth_pane_title {
+  background-color: #202020;
+  color: #ffffff;
+  height: 20px;
+  position: relative;
+  top: 0;
+  border-width:2px;
+  border-bottom-width:2px;
+  border-bottom-color:white;
+  border-bottom-style:solid;
+}
+.synth_pane_content {
+  background-color: #202020;
+  color: #ffffff;
+  height: 15px;
+  position: relative;
+  top: 6px;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "esesc-controller",
+  "main": "esesc_controller.js",
+  "version": "1.0.0",
+  "dependencies" : {
+    "socket.io-client" : "latest",
+    "socket.io-stream": "latest"
+  }
+}

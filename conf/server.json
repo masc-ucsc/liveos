@@ -1,0 +1,14 @@
+{
+  "ports": {
+    "main": 8080,
+    "terminal": 8081,
+    "csearch": 8082,
+    "latex": 8083,
+    "hello": 8084,
+    "synthesis": 8085,
+    "livesim": 8086,
+    "beautifier": 8087
+  },
+  "registration_passkey": "jseaarethebest!",
+  "terminal": "user"
+}

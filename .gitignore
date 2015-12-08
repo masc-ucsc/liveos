@@ -1,0 +1,9 @@
+files/*
+etc/*
+node_modules/*
+node_modules/
+indexes/*
+*~
+*.ruby-gemset
+*.ruby-version
+gstats.json

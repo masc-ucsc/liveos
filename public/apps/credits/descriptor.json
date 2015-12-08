@@ -1,0 +1,10 @@
+{
+  "name": "credits",
+  "title": "Credits",
+  "main_class": "credits",
+  "js_files": ["credits.js"],
+  "css_files": ["credits.css"],
+  "menu": "main",
+  "menu_order": 4,
+  "shortcut": "alt c"
+}

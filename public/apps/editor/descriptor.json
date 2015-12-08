@@ -1,0 +1,9 @@
+{
+  "name": "editor",
+  "title": "Code Editor",
+  "main_class": "editor_client",
+  "js_files": ["editor_client.js", "ot_settings.js", "beautifier.js"],
+  "css_files": ["editor_client.css", "ot_settings.css"],
+  "menu": "",
+  "shortcut": ""
+}

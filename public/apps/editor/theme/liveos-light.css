@@ -1,0 +1,193 @@
+div.Codemirror-hints {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: "Ubuntu Mono";
+  /* Text */ }
+  div.Codemirror-hints ul li {
+    color: white; }
+    div.Codemirror-hints ul li em {
+      font-weight: bold;
+      color: inherit; }
+    div.Codemirror-hints ul li.selected {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12355c), color-stop(50%, #185282), color-stop(51%, #134979), color-stop(100%, #1e5daa));
+      /*       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,93,170,1)), color-stop(100%,rgba(18,53,92,1))); */
+      color: white; }
+      div.Codemirror-hints ul li.selected em {
+        font-weight: bold;
+        color: inherit; }
+    div.Codemirror-hints ul li:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white; }
+      div.Codemirror-hints ul li:hover em {
+        color: inherit; 
+      }
+
+.cm-s-liveos-dark {
+background: #303333;
+color: white; }
+.cm-s-liveos-dark span {
+/* Unorthodox styles */ }
+.cm-s-liveos-dark span.cm-keyword {
+  color: #aaa;
+  font-weight: bold; }
+.cm-s-liveos-dark span.cm-atom {
+  color: #bfebbf; }
+.cm-s-liveos-dark span.cm-number {
+  color: #DCDCCC; }
+.cm-s-liveos-dark span.cm-def {
+  color: #DCDCCC;
+  font-weight: bold; }
+.cm-s-liveos-dark span.cm-variable {
+  color: #aee; }
+.cm-s-liveos-dark span.cm-variable-2 {
+  color: #eec; }
+.cm-s-liveos-dark span.cm-variable-3 {
+  color: #fff; }
+.cm-s-liveos-dark span.cm-property {
+  color: white; }
+.cm-s-liveos-dark span.cm-operator {
+  color: #F0EFD0; }
+.cm-s-liveos-dark span.cm-comment {
+  color: #7F9F7F;
+  font-style: italic; }
+.cm-s-liveos-dark span.cm-string {
+  color: #CC9393; }
+.cm-s-liveos-dark span.cm-string-2 {
+  color: #cc9393; }
+.cm-s-liveos-dark span.cm-meta {
+  color: #F0DFAF;
+  font-weight: bold; }
+.cm-s-liveos-dark span.cm-error {
+  color: #f99;
+  background: #633; }
+.cm-s-liveos-dark span.cm-qualifier {
+  color: #7cb8bb; }
+.cm-s-liveos-dark span.cm-builtin {
+  color: #DCDCCC; }
+.cm-s-liveos-dark span.cm-bracket {
+  color: #997; }
+.cm-s-liveos-dark span.cm-tag {
+  color: #93e0e3; }
+.cm-s-liveos-dark span.cm-attribute {
+  color: #DFAF8F; }
+.cm-s-liveos-dark span.cm-header {
+  color: #FFCC99; }
+.cm-s-liveos-dark span.cm-quote {
+  color: #090; }
+.cm-s-liveos-dark span.cm-hr {
+  color: #999; }
+.cm-s-liveos-dark span.cm-link {
+  color: #FFCC99; }
+.cm-s-liveos-dark span.cm-symbol {
+  color: #fff; }
+.cm-s-liveos-dark span.cm-searching {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px; }
+.cm-s-liveos-dark span.cm-searching.searching-current {
+  background: #ffff96;
+  border: none;
+  padding: 1px;
+  color: black !important; }
+.cm-s-liveos-dark span.cm-fade {
+  font-weight: normal;
+  color: #777; }
+.cm-s-liveos-dark div.CodeMirror-cursor {
+  /* Override the skin setting */
+  border-left: 1px solid white !important; }
+.cm-s-liveos-dark .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important; }
+.cm-s-liveos-dark .CodeMirror-nonmatchingbracket {
+  color: #f99;
+  background: #900; }
+.cm-s-liveos-dark .CodeMirror-gutter {
+  background: #272727 !important;
+  border-right: 1px solid #000; }
+.cm-s-liveos-dark .CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.07); }
+.cm-s-liveos-light {
+  background: white;
+  font-family: "Ubuntu Mono";
+  color: black; }
+.cm-s-liveos-light span {
+  /* Unorthodox Styles */ }
+.cm-s-liveos-light span.cm-keyword {
+    color: black;
+    font-weight: bold; }
+.cm-s-liveos-light span.cm-atom {
+  color: #219; }
+.cm-s-liveos-light span.cm-number {
+  color: #009999; }
+.cm-s-liveos-light span.cm-def {
+  color: #833;
+  font-weight: bold; }
+.cm-s-liveos-light span.cm-variable {
+  color: black; }
+.cm-s-liveos-light span.cm-variable-2 {
+  color: black; }
+.cm-s-liveos-light span.cm-variable-3 {
+  color: black; }
+.cm-s-liveos-light span.cm-property {
+  color: black; }
+.cm-s-liveos-light span.cm-operator {
+  color: black; }
+.cm-s-liveos-light span.cm-comment {
+  color: #999988;
+  font-style: italic; }
+.cm-s-liveos-light span.cm-string {
+  color: #900; }
+.cm-s-liveos-light span.cm-string-2 {
+  color: #dd1144; }
+.cm-s-liveos-light span.cm-meta {
+  color: #900;
+  font-weight: bold; }
+.cm-s-liveos-light span.cm-error {
+  color: #f00;
+  background: #fdd; }
+.cm-s-liveos-light span.cm-qualifier {
+  color: #555; }
+.cm-s-liveos-light span.cm-builtin {
+  color: #30a; }
+.cm-s-liveos-light span.cm-bracket {
+  color: #997 !important; }
+.cm-s-liveos-light span.cm-tag {
+  color: #170; }
+.cm-s-liveos-light span.cm-attribute {
+  color: #00c; }
+.cm-s-liveos-light span.cm-header {
+  color: blue; }
+.cm-s-liveos-light span.cm-quote {
+  color: #090; }
+.cm-s-liveos-light span.cm-hr {
+  color: #999; }
+.cm-s-liveos-light span.cm-link {
+  color: #00c; }
+.cm-s-liveos-light span.cm-symbol {
+  color: #077; }
+.cm-s-liveos-light span.cm-searching {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px; }
+.cm-s-liveos-light span.cm-searching.searching-current {
+  background: rgba(255, 255, 0, 0.5); }
+.cm-s-liveos-light span.cm-fade {
+  font-weight: normal;
+  color: #bbb; }
+.cm-s-liveos-light .CodeMirror-matchingbracket {
+  text-decoration: underline; }
+.cm-s-liveos-light .CodeMirror-nonmatchingbracket {
+  color: #f00;
+  background: #fdd; }
+.cm-s-liveos-light div.CodeMirror-cursor {
+  /* Override the skin setting */
+  border-left: 1px solid black !important; }
+.cm-s-liveos-light .CodeMirror-gutter {
+  background: #eee !important;
+  border-right: 1px solid #bbb; }
+.cm-s-liveos-light .CodeMirror-selected {
+  background: #eee; 
+}
+

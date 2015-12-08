@@ -1,0 +1,57 @@
+{
+  "name": "ngraph.pixi",
+  "version": "0.0.0",
+  "description": "PIXI.js graph renderer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/browserify -s ngraph ./example/index.js > ./example/bundle.js"
+  },
+  "keywords": [
+    "ngraph",
+    "pixi",
+    "graph",
+    "rednering"
+  ],
+  "author": {
+    "name": "Andrei Kashcha"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvaka/ngraph.pixi"
+  },
+  "dependencies": {
+    "ngraph.physics.simulator": "0.0.4",
+    "ngraph.forcelayout": "0.0.4"
+  },
+  "devDependencies": {
+    "ngraph.generators": "0.0.2",
+    "browserify": "~3.19.1"
+  },
+  "readme": "# ngraph.pixi\n\nThis is a 2d graph renderer which uses [PIXI.js](https://github.com/GoodBoyDigital/pixi.js)\nas a rendering engine.\n\n# Example\n\nThis code will render interactive graph:\n\n``` js\n  // let's create a simple graph with two nodes, connected by edge:\n  var graph = require('ngraph.graph')();\n  graph.addLink(1, 2);\n\n  // Create a pixi renderer:\n  var pixiGraphics = require('ngraph.pixi')(graph);\n\n  // And launch animation loop:\n  pixiGraphics.run();\n```\n\nTo run it, please refer to [example](./example/) folder.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```\nnpm install ngraph.pixi\n```\n\nTo compile (or browserify) local examples run:\n\n```\nnpm start\n```\n\n# Customization\n\n`ngraph.pixi` allows you to customize various aspects of graph appearance\n\n## Nodes/Link\n\nWhen working with `ngraph.graph` each node may have associated data. This data\nis considered a data model of a node. `ngraph.pixi` lets clients convert associated\ndata model into UI model for node (`createNodeUI()`) or link (`createLinkUI()`).\n\nResults of these methods are then used to actually render a node (`renderNode()`)\nor a link (`renderLink()`).\n\n``` js\n// add two nodes with associated data model\ngraph.addNode('user1', {sex: 'male'});\ngraph.addNode('user2', {sex: 'female'});\n\n// Construct UI model for node:\npixiGraphics.createNodeUI(function (node) {\n  return {\n    width: 2 + Math.random() * 20,\n    // use settings from node's data\n    color: node.data.sex === 'female' ? 0xFF0000 : 0x0000FF\n  };\n});\n\n// tell pixi how we want to render each UI model:\npixiGraphics.renderNode(function (nodeUIModel, ctx) {\n  ctx.lineStyle(0);\n  ctx.beginFill(nodeUIModel.color);\n  var x = nodeUIModel.pos.x - nodeUIModel.width/2,\n      y = nodeUIModel.pos.y - nodeUIModel.width/2;\n\n  ctx.drawRect(x, y, nodeUIModel.width, nodeUIModel.width);\n});\n```\n\nThere are several reasons for such separation of concerns. One is performance: By\nconstructing UI model once we are saving CPU cycles at rendering time. Another reason\nfor separation - you can have multiple renderers render the same graph without\ninterfering with each other.\n\n## Physics\n\nYou can change default physics engine parameters by passing `physics` object inside\nsettings:\n\n``` js\n  var createPixiGraphics = require('ngraph.pixi');\n  var pixiGraphics = createPixiGraphics(graph, {\n    physics: {\n      springLength: 30,\n      springCoeff: 0.0008,\n      dragCoeff: 0.01,\n      gravity: -1.2,\n    }\n  })\n```\n\nTo read more information about each of these and even more properties, please\nrefer to [physics engine documentation](https://github.com/anvaka/ngraph.physics.simulator/blob/b674df18e3b64c2ec86ef1a298736b5879eafe01/index.js#L15-L49).\n\n# What is missing?\n\nThis library was created as part of [ngraph](https://github.com/anvaka/ngraph)\nproject. If you like PIXI and want to help with graph rendering, your \ncontribution is absolutely welcomed and appreciated. Here are just some things which\ncould be done better:\n\n* Renderer currently works with `PIXI.Graphics`, which does not let rendering\ncustom text on the screen\n* `PIXI.Graphics` has decent pressure on garbage collector, since all primitives\nare rerendered on each frame. This can be improved by implementing custom `PIXI.DisplayObject` - \n[more info](https://github.com/GoodBoyDigital/pixi.js/issues/479#issuecomment-31973283)\n* Mouse/touch events are not exposed externally from the renderer. It will be\nnice to let clients of this library to react on user actions.\n* While all `ngraph` family modules are heavily tested, this one is lacking tests.\nStill trying to find out what test runner would suit better.\n\n# license\n\nMIT\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/anvaka/ngraph.pixi/issues"
+  },
+  "homepage": "https://github.com/anvaka/ngraph.pixi",
+  "_id": "ngraph.pixi@0.0.0",
+  "dist": {
+    "shasum": "b5eee9eb28f05b8026d39ecf94ebee1a7ecaac40",
+    "tarball": "http://registry.npmjs.org/ngraph.pixi/-/ngraph.pixi-0.0.0.tgz"
+  },
+  "_from": "ngraph.pixi@0.0.0",
+  "_npmVersion": "1.3.15",
+  "_npmUser": {
+    "name": "anvaka",
+    "email": "anvaka@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "anvaka",
+      "email": "anvaka@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "b5eee9eb28f05b8026d39ecf94ebee1a7ecaac40",
+  "_resolved": "http://registry.npmjs.org/ngraph.pixi/-/ngraph.pixi-0.0.0.tgz"
+}

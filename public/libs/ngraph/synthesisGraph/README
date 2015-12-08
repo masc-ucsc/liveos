@@ -1,0 +1,13 @@
+
+- This lib handles the graph rendering for the synthesis client
+- The way ngraph work is weird, and the implementation has some problems, so I'm
+  trying to reduce its usage as we go.
+- I'm already using a custom merge module, and ideally we should remove some
+  other stuff
+
+- When changing, keep in mind: 
+  - Changes to modules are erased by npm install
+  - The installed modules are not in the live repo
+  - Changes to synthesis_graph.js are erased by npm start 
+
+

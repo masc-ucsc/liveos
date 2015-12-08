@@ -1,0 +1,10 @@
+{
+  "name": "settings",
+  "title": "Settings",
+  "main_class": "settings_client",
+  "js_files": ["settings.js"],
+  "css_files": ["settings.css"],
+  "menu": "main",
+  "menu_order": 3,
+  "shortcut": "alt s"
+}

@@ -1,0 +1,49 @@
+.project_user {
+	margin: 5px;
+	margin-left: 10px;
+	width: calc(100% - 20px);
+	height: 28px;
+	padding: 2px;
+	padding-left: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	/*background-color: #aaa;*/
+}
+.project_user:hover {
+	background-color: #464646;
+}
+.project_user_online {
+	
+}
+.project_user_selected {
+	border-width: 1px;
+	border-style: solid;;
+	border-color: #FF0000;
+}
+.search_user_input{
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	width: calc(100% - 10px);
+}
+.search_all_users {
+	margin-left: 6px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	color: #08088A;
+	cursor: pointer;
+}
+.user_status {
+	float: right;
+}
+.add_user_to_project {
+	float: right;
+	cursor: pointer;
+}
+
+.other_users_label {
+	margin: 5px;
+	font-size: 1.3em;
+	font-weight: 600;
+	color: white;
+}

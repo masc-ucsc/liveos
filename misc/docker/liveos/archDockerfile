@@ -1,0 +1,47 @@
+#base arch install with alpm fix installed
+FROM l3iggs/archlinux 
+
+# Install Node.js and npm etc..
+RUN     pacman -Syu --noconfirm
+RUN     pacman -S   --noconfirm   make
+RUN     pacman -S   --noconfirm   gcc
+RUN     pacman -S   --noconfirm   sudo
+RUN     pacman -S   --noconfirm   openssh
+RUN     pacman -S   --noconfirm   crypto++
+RUN     pacman -S   --noconfirm   docker
+RUN     pacman -S   --noconfirm   nodejs
+RUN     pacman -S   --noconfirm   npm
+RUN     pacman -S   --noconfirm   mongodb
+RUN     pacman -S   --noconfirm   texlive-most
+RUN     pacman -S   --noconfirm   rubber
+RUN     pacman -S   --noconfirm   go
+RUN     pacman -S   --noconfirm   the_silver_searcher
+RUN     pacman -S   --noconfirm   git
+RUN     pacman -S   --noconfirm   net-tools
+
+RUN     echo '%docker ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+RUN     npm install forever -g
+
+ENV     PYTHON python2.7
+ENV     PATH   $PATH:/opt/liveos_terminal
+ENV     PATH   $PATH:~/.go/bin
+ENV     GOPATH ~/.go/
+ENV     TERM   xterm
+
+
+EXPOSE  8079-8090
+
+ADD     liveos /liveos
+ADD     mongo_checker.sh /liveos/mongo_checker.sh
+
+WORKDIR /liveos
+
+RUN     npm install
+RUN     install/csearch.sh
+RUN     install/configure.sh
+RUN     install/docker.sh
+RUN     install/terminal.sh
+RUN     mkdir -p /data/db
+
+#launch this arch image with a bash shell. Remember: interactive (cmd line persistence) mode is handled by the command that launches this docker
+CMD     mongod --smallfiles > logs/mongo.out & ./mongo_checker.sh && ./boot.sh && /bin/bash

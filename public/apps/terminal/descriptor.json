@@ -1,0 +1,9 @@
+{
+  "name": "terminal",
+  "title": "Terminal",
+  "main_class": "terminal_client",
+  "js_files": ["terminal_client.js"],
+  "css_files": ["terminal_client.css"],
+  "menu": "",
+  "shortcut": ""
+}

@@ -1,0 +1,9 @@
+This launches a term.js within a docker and mounts given directories as read only.
+
+command to run (must have the docker container epapp/arch-term-js) from src directory:
+
+sudo docker run -v /mada/users/ethanpapp/Desktop/src/test_mount/r1:/test/mount:ro -v /mada/users/ethanpapp/Desktop/src/test_mount/r2:/test/mount2:ro epapp/arch-term-js
+
+-v mounts the volume at the (ABSOLUTE) path:to this path inside the docker:as RO
+
+the final argument is the docker container that I have built to contain the term.js terminal used in the live environment (config is inside Dockerfile)

@@ -1,0 +1,112 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MASC LiveOS</title>
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" type='text/css' href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type='text/css' href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="views/project/project.css" />
+	<link rel="stylesheet" type="text/css" href="views/global/global.css" />
+
+	<!-- Javascript Files -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="libs/jquery/js/jquery.min.js"></script>
+	<script type="text/javascript" src="views/project/project.js"></script>
+	
+</head>
+<body>
+<form action="/main" method="get" id="project_selection_form">
+	<div class="project-selection-container" id="project_box">
+		<div class="project_container_head">
+			<div class="project_container_title">Projects <span class="logout_button"><a href="/logout"><img src="img/logout.png" /></a></div></span>
+			<div class="project_search_new">
+				<input type="text" id="search_new_project" value="Search for or create new project" class="livos_textbox search_new_project" />
+				<img id="add_new_project" src="img/add.png" style="cursor: pointer" />
+			</div>
+			<div id="project_container">
+			</div>
+		</div>
+	</div>
+<input type="hidden" name="project_id" id="project_id" value="" />
+</form>
+<script>
+var PORTS = JSON.parse('<%-JSON.stringify(conf.ports)%>');
+var socket = io.connect(':' + PORTS.main + '/', {query: $.param({token: '<%= assigned_token %>'})});
+var terminal_socket = io.connect(':' + PORTS.terminal + '/terminal', {'force new connection': true, query: $.param({token: '<%= assigned_token %>'})});
+
+$(document).ready(function() {
+	socket.emit('user_logged_in', {user_id: '<%= user._id %>', signature: '<%= user.signature %>'});
+
+	setInterval(function(){
+		socket.emit('hbeat', {user_id: '<%= user._id %>', signature: '<%= user.signature %>'});
+	},1000);
+
+	socket.emit('get_projects', {user_id: '<%= user._id %>', signature: '<%= user.signature %>'});
+	socket.on('receive_projects', function(obj){
+		$("#project_container").html("");
+		obj.projects.forEach(function(project) {
+			html = '<div class="project_container">';
+			html+= '<div class="project_name" onclick="submit_form(\''+project._id+'\')">'+project.name+'</div>';
+			html+= '</div>';
+			$("#project_container").append(html);
+		});
+	});
+});
+
+function submit_form(id)
+{
+	$("#project_id").val(id);
+	$("form#project_selection_form").submit();
+}
+
+//search/new project input events and stuff
+$("#search_new_project").focus(function(e) {
+	if($("#search_new_project").val() == "Search for or create new project")
+		$("#search_new_project").val("");
+});
+$("#search_new_project").focusout(function(e) {
+	if($("#search_new_project").val() === "")
+		$("#search_new_project").val("Search for or create new project");
+});
+$("#search_new_project").keyup(function(e) {
+	search_key = $("#search_new_project").val();
+	socket.emit("search_projects", {user_id: '<%= user._id %>', signature: '<%= user.signature %>', search_key : search_key});
+	socket.on("search_projects_result", function(obj) {
+		$("#project_container").html("");
+		obj.projects.forEach(function(project) {
+		html = '<div class="project_container">';
+		html+= '<div class="project_name" onclick="submit_form(\''+project._id+'\')">'+project.name+'</div>';
+		html+= '</div>';
+		$("#project_container").append(html);
+		});
+	});
+});
+
+//add new project
+$("#add_new_project").click(function() {
+	project_name = $("#search_new_project").val();
+	if(project_name === "" || project_name == "Search for or create new project")
+	{
+		alert("Please enter a name for your project");
+		return;
+	}
+	socket.emit("new_project", {name: project_name, user_id: '<%= user._id %>', signature: '<%= user.signature %>'});
+	socket.on("project_name_exists", function(obj) {
+		alert("Project name already exists. Please select a different name.");
+	});
+	socket.on("project_added", function(obj) {
+
+		terminal_socket.emit('user_added_new_proj', {proj_id: obj.project._id, proj_name: obj.project.name, user_id: '<%= user._id %>', signature: '<%= user.signature %>'}); //need to let the terminal server know to start a new project docker for the new project
+
+		html = '<div class="project_container">';
+		html+= '<div class="project_name" onclick="submit_form(\''+obj.project._id+'\')">'+obj.project.name+'</div>';
+		html+= '</div>';
+		$("#project_container").append(html);
+	});
+});
+
+</script>
+</body>
+</html>

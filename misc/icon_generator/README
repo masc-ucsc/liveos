@@ -1,0 +1,8 @@
+Icon Generator is a tool to generate PNG and SVG icons from AngularJS icon set.
+
+First, make sure you have inkscape installed. You can modify input.json to define which icons you would like to generate, in what size(s) and what color(s). Make sure you follow JSON rules in that file. To find out your options, please visit: https://klarsys.github.io/angular-material-icons/
+
+Once you have saved input.json, run the following command:
+  node generate.js
+
+SVG outputs will go to svg/ and PNG outputs will go to png/

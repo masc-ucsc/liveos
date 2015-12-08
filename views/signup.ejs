@@ -1,0 +1,54 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MASC LiveOS - Signup</title>
+	<link rel="stylesheet" type="text/css" href="views/global/global.css" />
+	<link rel="stylesheet" type="text/css" href="views/index/index.css" />
+</head>
+<body>
+<div class="signup_container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+	<!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+
+	<!-- LOGIN FORM -->
+	<form action="/signup" method="post">
+		<div class="form-group">
+			<label class="signup_field_name">Email</label>
+			<input type="text" class="livos_textbox signup_field" name="email">
+		</div>
+		<div class="form-group">
+			<label class="signup_field_name">Password</label>
+			<input type="password" class="livos_textbox signup_field" name="password">
+		</div>
+		<div class="form-group">
+			<label class="signup_field_name">Name</label>
+			<input type="text" class="livos_textbox signup_field" name="full_name">
+		</div>
+
+	<% if (conf.registration_passkey) { %>
+		<div class="form-group">
+			<label class="signup_field_name">Registeration Key</label>
+			<input type="password" class="livos_textbox signup_field" name="passkey">
+		</div>
+	<% } %>
+		
+		<center>
+		<button type="submit" class="livos_button signup_button">Signup</button>
+		</center>
+	</form>
+
+	<p>Already have an account? <a href="/login">Login</a> or go <a href="/">home</a>.</p>
+
+</div>
+
+</div>
+</body>
+</html>

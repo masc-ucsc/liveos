@@ -1,0 +1,144 @@
+.JSWM_manager
+{
+}
+
+.JSWM_window
+{
+	background: #EEEEFF;
+}
+
+/*.JSWM_window_handle
+{
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	background: #c0c0c0 url('img/window_handle_bg.png') top left repeat-y;
+	color: #dddddd;
+}
+
+.JSWM_window_active .JSWM_window_handle
+{
+	background: #a6caf0 url('img/window_handle_active_bg.png') top left repeat-y;
+	color: #FFFFFF;
+}*/
+
+.JSWM_window_maximised .JSWM_window_handle
+{
+}
+
+.JSWM_window_title
+{
+	background: 2px 50% no-repeat;
+}
+
+.JSWM_window_title span
+{
+	font-family: Verdana, sans-serif;
+}
+
+.JSWM_window_handle_right
+{
+}
+
+.JSWM_window_handle_right img
+{
+}
+
+.JSWM_window_contents
+{
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+}
+
+.JSWM_window_maximised .JSWM_window_contents
+{
+}
+
+.JSWM_window_tab
+{
+  background: #EEEEFF;
+}
+
+.JSWM_window_resize
+{
+}
+
+.JSWM_window_resizeNW
+{
+}
+
+.JSWM_window_resizeNE
+{
+}
+
+.JSWM_window_resizeSW
+{
+}
+
+.JSWM_window_resizeSE
+{
+}
+
+.JSWM_tabList
+{
+	height: 29px;
+	border: 0;
+  background: url('img/tablist_bg.png') bottom left repeat-x;
+}
+
+.JSWM_tabButton
+{
+	margin-top: 4px;
+	margin-left: 2px;
+	border-color: #808080;
+	background: url('img/tab_bg.png') repeat-x;
+}
+
+.JSWM_tabLabel
+{
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.JSWM_tabButton.JSWM_tabButton_active
+{
+	border-bottom-color: #d6d3ce;
+	background: url('img/tab_hover_bg.png') repeat-x;
+}
+
+.JSWM_tabButton_active .JSWM_tabLabel
+{
+	color: #000000;
+	font-weight: bold;
+}
+
+.JSWM_tabClose
+{
+}
+
+.JSWM_lineclear
+{
+}
+
+/* Shadow */
+.JSWM_shadow_container
+{
+}
+
+.JSWM_window_maximised .JSWM_shadow_container
+{
+}
+
+.JSWM_shadowNE, .JSWM_shadowSW, .JSWM_shadowSE, .JSWM_shadowS, .JSWM_shadowE
+{
+}
+
+.JSWM_shadowNE {}
+.JSWM_shadowSW {}
+.JSWM_shadowSE {}
+.JSWM_shadowS  {}
+.JSWM_shadowE  {}

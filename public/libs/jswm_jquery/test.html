@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+
+
+  <head>
+
+    <code>
+    </code>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>window manager test</title>
+    <link rel="stylesheet" href="./jswm.css" /> 
+
+    <script src="key_press/keypress.js" type="text/javascript"></script>
+    <script src="key_press/keypress-2.0.1.min.js" type="text/javascript"></script>
+
+    <script src="./jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="./jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="./jswm.jquery.js" type="text/javascript"></script>
+    <!-- load jswm theme -->
+    <link rel="stylesheet" href="./themes/firefox/style.css" />
+    <script src="themes/firefox/config.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      var windowManager;
+      $(document).ready(function() {
+        windowManager = new JSWM();
+
+        //$('input[type="button"][name="cascade"]').click(function(){windowManager.cascade();});
+        //$('input[type="button"][name="collapseAll"]').click(function(){windowManager.collapseAll();});
+        //$('input[type="button"][name="expandAll"]').click(function(){windowManager.expandAll();});
+        //$('input[type="button"][name="openElement"]').click(function(){eval('windowManager.openElement(' + $('#openElement').val() + ');');});
+        //$('input[type="button"][name="openNew"]').click(function(){eval('windowManager.openNew(' + $('#openNew').val() + ');');});
+        //$('input[type="button"][name="openURI"]').click(function(){eval('windowManager.openURI(' + $('#openURI').val() + ');');});
+        //$('input[type="button"][name="tile"]').click(function(){windowManager.tile();});
+      });
+    </script>
+
+
+
+
+
+    <script>
+      var listener = new window.keypress.Listener();
+
+      listener.simple_combo("shift s", function() {
+        windowManager.openNew(500, 300, 'center', 'center', {title: 'JS filled window', icon: 'images/note.png'});
+
+        //windowManager.tile();
+        console.log("You pressed control and s");
+      });
+
+      // There are also a few other shortcut methods:
+
+      // If we want to register a counting combo
+      listener.counting_combo("tab space", function(e, count) {
+        console.log("You've pressed this " + count + " times.");
+      });
+
+      // If you want to register a sequence combo
+      listener.sequence_combo("up up down down left right left right b a enter", function() {
+        console.log("you entered the secret code")
+        lives = 30;
+      }, true);
+
+
+      listener.simple_combo("shift c", function() {
+        windowManager.collapseAll();
+        console.log("You pressed control and c");
+      });
+
+      listener.simple_combo("shift e", function() {
+        windowManager.expandAll();
+        console.log("You pressed control and e");
+      });
+
+      listener.simple_combo("shift t", function() {
+        windowManager.tile();
+        console.log("You pressed control and t");
+      });
+
+      listener.simple_combo("shift a", function() {
+        windowManager.cascade();
+        console.log("You pressed control and a");
+      });
+
+      listener.simple_combo("shift q", function() {
+        windowManager.close();
+        console.log("You pressed control and q");
+      });
+
+
+      listener.simple_combo("shift l", function() {
+        windowManager.setActiveWindow(1)
+        console.log("You pressed shift 1");
+      });
+
+      listener.simple_combo("shift k", function() {
+        windowManager.setActiveWindow(2)
+        console.log("You pressed shift 2");
+      });
+
+
+
+    </script>
+
+  </head>
+
+
+  <body>
+
+
+    <!--<div id="test">
+    
+
+      <ul>
+
+        <li>
+          <code>
+            cascade()
+          </code>
+          <input type="button" name="cascade" value="run" />
+        </li>
+
+        <li>
+          <code>
+            collapseAll()
+          </code>
+          <input type="button" name="collapseAll" value="run" />
+        </li>
+
+        <li>
+          <code>
+            expandAll()
+          </code>
+          <input type="button" name="expandAll" value="run" />
+        </li>
+
+        <li>
+          <code>
+            openElement(&lt;HTMLObject&gt; contents, &lt;int&gt; w, &lt;int&gt; h, l, t, &lt;JSWindowOptions&gt; options, &lt;boolean&gt; force)<br />
+            openElement(<input id="openElement" type="text" value="'test', 700, 400, 'center', 'center', {title: 'Wrapped content window', icon: 'images/folder.png'}" size="60" />)
+          </code>
+          <input type="button" name="openElement" value="run" />
+        </li>
+
+        <li>
+          <code>
+            openNew(&lt;int&gt; w, &lt;int&gt; h, l, t, &lt;JSWindowOptions&gt; options)<br />
+            openNew(<input id="openNew" type="text" value="500, 300, 'right', 'center', {title: 'JS filled window', icon: 'images/note.png'}" size="60" />)
+          </code>
+          <input type="button" name="openNew" value="run" />
+        </li>
+
+        <li>
+          <code>
+            openURI(&lt;string&gt; uri, &lt;int&gt; w, &lt;int&gt; h, l, t, &lt;JSWindowOptions&gt; options)<br />
+            openURI(<input id="openURI" type="text" value="'http://www.google.com', 500, 300, 'right', 'top', {title: 'iframe', icon: 'images/web.png'}" size="60" />)
+          </code>
+          <input type="button" name="openURI" value="run" />
+        </li>
+
+        <li>
+          <code>tile()</code>
+          <input type="button" name="tile" value="run" />
+        </li>
+
+
+      </ul>
+
+
+
+    </div>
+-->
+
+    <!--<div id="content1" style="padding: 1em;">
+
+      <h3>HTML content (id="content1")</h3>
+      <p>
+        Wrap this content  as the first window then click <a href="#" onclick="windowManager.windows[0].openTab('image1'); return false;">here</a> to add image1 as a tab.
+      </p> 
+      
+
+
+      <div id="image1">
+        <strongi>id="image1"</strong><br />
+        <img src="http://images.sourceforge.net/sfx/sfx_logo2.png" alt="iamge" />
+      </div>
+
+
+    </div>
+  -->
+
+
+
+  </body>
+
+
+</html>

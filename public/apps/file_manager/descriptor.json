@@ -1,0 +1,10 @@
+{
+  "name": "file_manager",
+  "title": "File Manager",
+  "main_class": "file_client",
+  "js_files": ["file_manager.js"],
+  "css_files": ["file_manager.css"],
+  "menu": "main",
+  "menu_order": 1,
+  "shortcut": "alt f"
+}

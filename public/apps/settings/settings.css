@@ -1,0 +1,142 @@
+.settings_container {
+
+}
+
+.settings_field_container {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
+.key_text_div {
+  float: left;
+  width: 100%;
+  margin: 5px;
+  font-size: 130%;
+}
+
+.pubpriv_key_input {
+  float: left;
+  width: 80%;
+  margin: 15px;
+  display: block; 
+}
+
+.label_class {
+  float: left;
+  width: 100%;
+  margin: 15px;
+  margin-right: 15px;
+  margin-bottom: -10px;
+  display: block; 
+}
+
+.label_class_upload {
+  float: left;
+  font-size: 110%;
+  width: 100%;
+  margin: 15px;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  display: block; 
+}
+
+.upload_token_button{
+  float: left;
+  width: 30%;
+  margin: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  display: block; 
+
+}
+
+.token_btn_submit_label{
+  font-weight: bold;
+}
+
+.upload_token_button_submit{
+  float: left;
+  height: 23px;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  margin: 15px;
+  margin-right: 15px;
+  display: block; 
+
+}
+
+.upload_token_button_submit:hover{
+  cursor:pointer; 
+
+}
+
+.upload_token_button:hover{
+  cursor:pointer;
+
+}
+
+.select_token_button{
+  float: left;
+  width: 15%;
+  margin: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  display: block; 
+
+}
+
+.select_token_button:hover{
+  cursor:pointer;
+}
+
+/*input[type=file] { 
+    width: 1px; 
+    visibility: hidden;
+}*/
+
+.add_pubkey_button{
+  float:left;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+
+}
+
+.erase_pubkey_button{
+  float:left;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-left:20px;
+
+}
+
+
+.add_key_button {
+  float:left;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.settings_field {
+  width: 130px;
+}
+
+.settings_field_label {
+  width: 130px;
+}
+
+.settings_desc {
+  float: left;
+  width: 100%;
+}
+
+.reset_button {
+  clear:both;
+  float: left;
+  margin-top: 10px;
+  margin-left: 15px;
+}

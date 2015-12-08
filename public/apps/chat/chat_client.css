@@ -1,0 +1,36 @@
+.chat-container{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+	font-family: 'Droid Sans', sans-serif;
+}
+.chat-board{
+  font-family: 'Ubuntu Mono';
+  text-align:left;
+  padding: 5px;
+  background:rgba(0,0,0,0);
+  overflow:auto;
+  color: #C2C2C2;
+  top: 0; left: 0; right: 0; bottom: 0px;
+  width: 100%;
+  height: calc(100% - 36px);
+	line-height:100%;
+	white-space: pre;
+	word-wrap:break-word;
+}
+.chat-message{
+  height: 33px;
+  width: 100%;
+  background-color: #252525;
+  border-style: solid;
+  bottom: 10px;
+	border-radius: 0px;
+  padding: 5px;
+  border: 0px solid #bbbbbb;
+  color: #ffffff;
+  background-color: #252525;
+}
+
+.chat-container .JSWM_window_handle{
+	z-index: 1000;
+}

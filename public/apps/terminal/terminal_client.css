@@ -1,0 +1,110 @@
+.liveos_terminal {
+  height: 57%; 
+  width: 100%;
+  /*overflow:hidden;*/
+  /*background-color: #000000 !important;*/
+  padding: 5px;
+}
+
+.login_form_git_window{
+  height: 100%;
+  width: 100%;
+  
+}
+
+.corner_drop_div{
+  height:1px;
+  width:1px;
+  position:relative;
+  top:0;
+  left:100%;  
+}
+.login_form_git_window_positioning {
+  position: relative;
+  height:100%;
+  width: 100%;
+
+}
+.or_div{
+  margin-top:20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.or_div2{
+  margin-top:5px;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.clone_type_div{
+  margin-top:5px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+.check_box_label{
+  margin-left: 5px
+}
+
+.new_token_text{
+  margin-top:-10px;
+  font-size: 65%;
+  margin-bottom: 10px;
+
+}
+.drop-open {
+  z-index: 1000;
+
+}
+
+.git_place_holder_div {
+  width:100%;
+  height:40px;
+}
+
+.new_repo_name_label{
+  width:75%;
+
+}
+
+.okay_button_input{
+  float:right;
+  margin-right: 12% ;
+  margin-top: 5px;
+  margin-bottom:3px;
+  cursor: pointer;
+}
+
+.close_button_input{
+  margin-left: 10%;
+  float:left;
+  margin-top: 5px;
+  margin-bottom:3px;
+  cursor: pointer;
+}
+
+.git_input_style{
+  width:100%;
+  margin-right:2px;
+  margin-bottom:10px;
+  display: block; 
+  position: relative;
+
+}
+
+.label_style{
+  margin-top: 2px;
+  display: block;
+  text-align: right;
+  position:inline;
+}
+
+.new_branch_div_drop{
+  width:60%;
+
+
+}

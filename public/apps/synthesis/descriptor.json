@@ -1,0 +1,10 @@
+{
+  "name": "synthesis",
+  "title": "Synthesis",
+  "main_class": "synthesis_client",
+  "js_files": ["synthesis_client.js"],
+  "css_files": ["synthesis_client.css"],
+  "menu": "apps",
+  "menu_order": 3,
+  "shortcut": "alt y"
+}

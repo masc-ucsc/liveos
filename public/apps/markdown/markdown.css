@@ -1,0 +1,21 @@
+.markdown_container {
+  height:100%;
+  padding: 1px;
+}
+.markdown_error_container {
+  position: absolute;
+  top: 30px;
+  margin: 1px;
+  width: (100% - 1px);
+}
+.markdown_drop {
+  z-index: 99999;
+}
+.mdparam {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #8888FF;
+}
+.md_viewer {
+  padding: 5px;
+}

@@ -1,0 +1,142 @@
+.JSWM_manager
+{
+}
+
+.JSWM_window
+{
+	background: #EEEEFF;
+}
+
+.JSWM_window_handle
+{
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	background-color: #D0D0D0;
+	color: #EEEEEE;
+}
+
+.JSWM_window_active .JSWM_window_handle
+{
+	background-color: #99bbee;
+	color: #FFFFFF;
+}
+
+.JSWM_window_maximised .JSWM_window_handle
+{
+}
+
+.JSWM_window_title
+{
+}
+
+.JSWM_window_title span
+{
+	font-family: Verdana, sans-serif;
+}
+
+.JSWM_window_handle_right
+{
+}
+
+.JSWM_window_handle_right img
+{
+}
+
+.JSWM_window_contents
+{
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+}
+
+.JSWM_window_maximised .JSWM_window_contents
+{
+}
+
+.JSWM_window_tab
+{
+  background: #EEEEFF;
+}
+
+.JSWM_window_resize
+{
+}
+
+.JSWM_window_resizeNW
+{
+}
+
+.JSWM_window_resizeNE
+{
+}
+
+.JSWM_window_resizeSW
+{
+}
+
+.JSWM_window_resizeSE
+{
+}
+
+.JSWM_tabList
+{
+	border-bottom-color: #666666;
+	background: #FFFFFF;
+}
+
+.JSWM_tabButton
+{
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	-moz-border-radius: 7px 7px 0 0;
+	background: #D0D0D0;
+}
+
+.JSWM_tabLabel
+{
+	font-family: Verdana, sans-serif;
+	color: #EEEEEE;
+}
+
+.JSWM_tabButton_active
+{
+	border-bottom-color: #99bbee;
+	background-color: #99bbee;
+}
+
+.JSWM_tabButton_active .JSWM_tabLabel
+{
+	color: #FFFFFF;
+}
+
+.JSWM_tabClose
+{
+}
+
+.JSWM_lineclear
+{
+}
+
+/* Shadow */
+.JSWM_shadow_container
+{
+}
+
+.JSWM_window_maximised .JSWM_shadow_container
+{
+}
+
+.JSWM_shadowNE, .JSWM_shadowSW, .JSWM_shadowSE, .JSWM_shadowS, .JSWM_shadowE
+{
+}
+
+.JSWM_shadowNE {}
+.JSWM_shadowSW {}
+.JSWM_shadowSE {}
+.JSWM_shadowS  {}
+.JSWM_shadowE  {}

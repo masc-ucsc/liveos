@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+	<title>MASC LiveOS - <%= project.name %></title>
+
+	<!-- Style Files -->
+	<link rel="stylesheet" type="text/css" href="libs/fonts/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/fonts/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/fonts/ubuntu_mono.css" />
+  <link rel="stylesheet" type="text/css" href="libs/fonts/droid_sans.css" />
+	<link rel="stylesheet" type="text/css" href="libs/slidemenu/component.css" />
+	<link rel="stylesheet" type="text/css" href="libs/codemirror/lib/codemirror.css" />
+	<link rel="stylesheet" type="text/css" href="libs/codemirror/addon/dialog/dialog.css" />
+	<link rel="stylesheet" type="text/css" href="libs/codemirror/addon/fold/foldgutter.css" />
+	<link rel="stylesheet" type="text/css" href="libs/codemirror/addon/lint/lint.css" />
+  <link rel="stylesheet" type="text/css" href="libs/codemirror/addon/scroll/simplescrollbars.css" />
+  <link rel="stylesheet" type="text/css" href="libs/codemirror/addon/search/matchesonscrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="libs/codemirror/addon/merge/merge.css" />
+	<link rel="stylesheet" type="text/css" href="libs/jquery/css/ui-darkness/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap-multiselect.css" />
+	<link rel="stylesheet" type="text/css" href="libs/powertip/jquery.powertip.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/ztree/zTreeStyle.css" />
+	<link rel="stylesheet" type="text/css" href="libs/jswm_jquery/windowMenu/style.css" />
+  <link rel="stylesheet" type="text/css" href="libs/jswm_jquery/style.css" />
+	<link rel="stylesheet" type="text/css" href="libs/jswm_jquery/jswm.css" />
+	<link rel="stylesheet" type="text/css" href="libs/MultiLvlMenuPlugin/style.css" />
+	<link rel="stylesheet" type="text/css" href="libs/epoch/epoch.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/tether/drop/drop-theme-basic.css" />
+	<link rel="stylesheet" type="text/css" href="libs/tether/drop/drop-theme-arrows.css" />
+	<link rel="stylesheet" type="text/css" href="libs/tether/drop/drop-theme-arrows-bounce-dark.css" />
+  <link rel="stylesheet" type="text/css" href="libs/alertify/themes/alertify.core.css" />
+  <link rel="stylesheet" type="text/css" href="libs/alertify/themes/alertify.custom.css" />
+  <link rel="stylesheet" type="text/css" href="views/global/global.css" />
+	<link rel="stylesheet" type="text/css" href="views/main/main.css" />
+
+  <!-- Javascript Files -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="libs/jquery/js/jquery-2.1.3.js"></script>
+  <script type="text/javascript" src="libs/jquery/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="libs/jquery/js/jquery.velocity.js"></script>
+  <script type="text/javascript" src="libs/bootstrap/js/bootstrap-3.1.1.min.js"></script>
+  <script type="text/javascript" src="libs/bootstrap/js/bootstrap-multiselect.js"></script>
+  <script type="text/javascript" src="libs/ot/text-operation.js"></script>
+  <script type="text/javascript" src="libs/ot/client.js"></script>
+  <script type="text/javascript" src="libs/ot/undo-manager.js"></script>
+  <script type="text/javascript" src="libs/ot/cursor.js"></script>
+  <script type="text/javascript" src="libs/ot/wrapped-operation.js"></script>
+  <script type="text/javascript" src="libs/ot/editor-client.js"></script>
+  <script type="text/javascript" src="libs/ot/socketio-adapter.js"></script>
+  <script type="text/javascript" src="libs/ot/codemirror-adapter.js"></script>
+  <script type="text/javascript" src="libs/slidemenu/modernizr.custom.js"></script>
+  <script type="text/javascript" src="libs/slidemenu/classie.js"></script>
+  <script type="text/javascript" src="libs/codemirror/lib/codemirror.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/dialog/dialog.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/search/searchcursor.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/edit/matchbrackets.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/search/search.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/search/matchesonscrollbar.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/fold/foldcode.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/fold/foldgutter.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/fold/brace-fold.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/fold/xml-fold.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/fold/comment-fold.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/lint/lint.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/scroll/simplescrollbars.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/scroll/annotatescrollbar.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/merge/diff_match_patch.js"></script>
+  <script type="text/javascript" src="libs/codemirror/addon/merge/merge.js"></script>
+  <script type="text/javascript" src="libs/jswm_jquery/jswm.jquery.js"></script>
+  <script type="text/javascript" src="libs/jswm_jquery/config.js"></script>
+  <script type="text/javascript" src="libs/tile_graph/tile_graph.js"></script>
+  <script type="text/javascript" src="libs/MultiLvlMenuPlugin/jquery.multLvlMenu.js"></script>
+  <script type="text/javascript" src="libs/powertip/jquery.powertip.min.js"></script>
+  <script type="text/javascript" src="libs/ztree/ztree.core.js"></script>
+  <script type="text/javascript" src="libs/ztree/ztree.edit.js"></script>
+  <script type="text/javascript" src="libs/jswm_jquery/windowMenu/jquery.WindowMenu.js"></script>
+  <script type="text/javascript" src="libs/jswm_jquery/key_press/keypress.js"></script>
+  <script type="text/javascript" src="libs/jswm_jquery/key_press/keypress-2.0.1.min.js"></script>
+  <script type="text/javascript" src="libs/d3/d3.min.js"></script>
+  <script type="text/javascript" src="libs/epoch/epoch.custom.js"></script>
+  <script type="text/javascript" src="libs/tether/drop/drop.min.js"></script>
+  <script type="text/javascript" src="libs/alertify/lib/alertify.min.js"></script>
+  <script type="text/javascript" src="libs/misc/delivery.js"></script>
+  <script type="text/javascript" src="views/global/global.js"></script>
+  <script type="text/javascript" src="views/main/main.js"></script>
+  <script type="text/javascript" src="libs/misc/term.js"></script>
+  <script type="text/javascript" src="libs/ngraph/pixijs/pixi.dev.js"></script>
+  <script type="text/javascript" src="libs/ngraph/synthesisGraph/synthesis_graph.js"></script>
+
+
+<script type="text/javascript">
+////////////////////////////////////// General Functions ////////////////////////////////////
+//Finding out a file's extension
+function get_extension (file_name) {
+  var t = file_name;
+  var i = t.indexOf(".");
+  while(i != -1) {
+    t = t.substr(i+1);
+    i = t.indexOf(".");
+  }
+  if(t == file_name || t === "")
+    return "";
+  else
+    return t;
+}
+
+//JS and CSS file loader
+loaded_libs = [];
+function load_lib(name)
+{
+  //check if the passed argument is an array
+	if(Object.prototype.toString.call(name) === "[object Array]") 
+	{
+    	name.forEach(function(n) {
+    		if(loaded_libs.indexOf(n) == -1)
+    		{
+	    		jQuery.ajax({
+				    async:false,
+				    type:"GET",
+				    url:n,
+				    data:null,
+				    dataType: "script",
+				    error: function(data) {
+				    	console.log("Error loading library: " + n);
+              console.log(data);
+    				}
+				});
+				loaded_libs.push(n);
+			}
+    	});	
+	}
+	else
+	{
+		if(loaded_libs.indexOf(name) == -1)
+		{
+			jQuery.ajax({
+			    async:false,
+			    type:"GET",
+			    url:name,
+			    data:null,
+			    dataType:"script",
+			    error: function(data) {
+				    console.log("Error loading library: " + name);
+              console.log(data);
+    			}
+			});
+			loaded_libs.push(name);
+		}
+	}
+}
+
+function load_css (path) {
+  jQuery("head").append("<link rel=\"stylesheet\" href=\"" + path + "\" type=\"text/css\" />");
+}
+
+function dump_stats() {
+  window_stats = jswm.dump();
+}
+
+////////////////////////////////////// General Functions ////////////////////////////////////
+//global constants
+var USER_ID = '<%= user._id %>';
+var USER_NAME = '<%= user.full_name %>';
+var USER_ADMIN = '<%= user.admin %>';
+var SIGNATURE = '<%= user.signature %>';
+var TOKEN = '<%= assigned_token %>';
+var PROJECT_ID = '<%= project._id %>';
+var CONF = JSON.parse('<%-JSON.stringify(conf)%>');
+var PORTS = CONF.ports;
+
+//main socket
+var socket = io.connect(":" + PORTS.main + "/", {query: $.param({token: TOKEN})});
+
+//Loading Apps
+var app_list = JSON.parse('<%-JSON.stringify(apps)%>');
+var apps = {};
+for(var appname in app_list) {
+  //load js files
+  app = app_list[appname];
+  for(var i = 0; i < app.js_files.length; i++) {
+    load_lib("apps/" + app.name + "/" + app.js_files[i]);
+  }
+  //load css files
+  for(var i = 0; i < app.css_files.length; i++) {
+    load_css("apps/" + app.name + "/" + app.css_files[i]);
+  }
+  //create app object
+  apps[app.name] = new window[app.main_class]();
+}
+
+//Loading settings
+var all_settings = {};
+var tile_graph = new Tile_Graph(); 
+var window_stats;
+apps.settings.get_settings();
+
+$(document).ready(function() {
+	//left browser tabs
+	left_browsers = ['user', 'file'];
+	left_browsers_open = [];
+	left_browsers_open.file = -1;
+	left_browsers_open.user = -1;
+	jswm_init($);
+
+	//signing into server
+	socket.emit('connect_to_server', {user_id: '<%= user._id %>', signature: '<%= user.signature %>'});
+  socket.emit('search_projects', {user_id: '<%= user._id %>', signature: '<%= user.signature %>', search_key :''});
+});
+
+//terminal client
+socket.on("search_projects_result", function(obj) {
+  obj.projects.forEach(function(project) {
+    var this_human_readable_name = project.name;
+    if(this_human_readable_name.indexOf(" ") !== -1){
+      console.log('This project name had a space, removing space: ' + this_human_readable_name);
+      this_human_readable_name = this_human_readable_name.replace(" ", "");
+    }
+    html = '<li><a href="#" onclick="apps[\'terminal\'].open(\'docker\', \'shared\', \'arch\', \'' + this_human_readable_name + '\', \'' + project._id + '\');">' + project.name + '</a></li>';
+    $("#shared_terminal_holder").append(html);
+  });
+});
+
+
+/////////////////////////////////////Window Manager Stuff/////////////////////////////////////
+var wm;  //JSWM.WindowManager();
+$(document).ready(function() {
+	wm = new JSWM();
+	window.wm = wm; // For debugging reasons
+	$('#settings_button').click(function(){
+		apps.settings.open();
+	});
+});
+
+/////////////////////////////////////Slider Stuff/////////////////////////////////////////////
+var left_browsers;
+var left_browsers_open;
+
+function toggle_left(browser)
+{
+	if(left_browsers_open[browser] == -1)
+	{
+		left_browsers.forEach(function(left_browser) {
+			if(left_browser != browser && left_browsers_open[left_browser] == 1)
+				toggle_browser(left_browser);
+		});
+
+		switch(browser)
+		{
+			case 'user': get_project_users('');
+			break;
+		}
+	}
+
+	toggle_browser(browser);
+}
+
+function toggle_browser(browser)
+{
+	var btn = document.getElementById('browse_'+browser+'s');
+	var el = document.getElementById(browser+'_browser');
+	classie.toggle( btn, 'active' );
+  	classie.toggle( el, 'cbp-spmenu-open' );
+  	left_browsers_open[browser] *= -1;
+}
+
+/////////////////////////////////////Key Manager Stuff/////////////////////////////////////////
+var key_listener;
+
+function update_shortcuts () {
+  if(key_listener)
+    key_listener.reset();
+
+  key_listener = new window.keypress.Listener();
+  for(var key in all_settings.global_shortcuts) {
+    var scut = all_settings.user_scuts[key];
+    var t = scut.indexOf('meta');
+    var is_meta = false;
+    if(t != -1) {
+      scut = scut.substr(5);
+      meta = is_meta = true;
+    }
+    var fun_str = '';
+    if(is_meta)
+      fun_str = 'if(wm.isMeta) ';
+    fun_str += all_settings.global_shortcuts[key].function;
+    var fun = new Function(fun_str);
+    key_listener.register_combo({
+      'keys' : scut,
+      'on_release': fun,
+      'prevent_default' : (!is_meta),
+      'is_exclusive' : true,
+      'is_sequence' : true
+    });
+  }
+
+  key_listener.register_combo({
+    "keys"              : "shift space",
+    "on_release"        : function(e){
+      if(wm.isMeta)
+        wm.unmeta();
+      else
+        wm.meta();
+    },
+    'prevent_default' : true,
+    'is_exclusive' : true,
+    'is_sequence' : true
+  });
+
+  key_listener.register_combo({
+    "keys"              : "ctrl shift s",
+    "on_release"        : function(e){
+      secret_mode();
+    },
+    'prevent_default' : true,
+    'is_exclusive' : true,
+    'is_sequence' : true
+  });
+
+  key_listener.register_combo({
+    "keys"              : "alt x",
+    "on_release"        : function(e){
+      apps.terminal.open('nondocker', 'private', 'arch');
+    },
+    'prevent_default' : true,
+    'is_exclusive' : true,
+    'is_sequence' : true
+  });
+  
+  key_listener.register_combo({
+    "keys"              : "esc",
+    "on_release"        : function(e){
+      if(wm.isMeta)
+        wm.unmeta();
+    },
+    'prevent_default' : true,
+    'is_exclusive' : true,
+    'is_sequence' : true
+  });
+}
+
+function focus_right () {
+  if(wm.isMeta && wm.curr_active_window.mode == 't') 
+    wm.selecter('r', null);
+}
+
+function focus_left () {
+  if(wm.isMeta && wm.curr_active_window.mode == 't') 
+    wm.selecter('l', null);
+}
+
+function focus_up () {
+  if(wm.isMeta && wm.curr_active_window.mode == 't') 
+    wm.selecter('u', null);
+}
+
+function focus_down () {
+  if(wm.isMeta && wm.curr_active_window.mode == 't') 
+    wm.selecter('d', null);
+}
+
+function swap_right () {
+  if(wm.curr_active_window.mode == 't' && wm.isMeta) 
+    wm.switcher('r');
+}
+
+function swap_left () {
+  if(wm.curr_active_window.mode == 't' && wm.isMeta) 
+    wm.switcher('l');
+}
+
+function swap_up () {
+  if(wm.curr_active_window.mode == 't' && wm.isMeta) 
+    wm.switcher('u');
+}
+
+function swap_down () {
+  if(wm.curr_active_window.mode == 't' && wm.isMeta) 
+    wm.switcher('d');
+}
+
+function close_cur_window () {
+  if(wm && wm.curr_active_window) 
+    wm.curr_active_window.close();
+}
+
+function tile_dir () {
+  if(wm.curr_active_window.mode == "t" && wm.isMeta) 
+    wm.tileV();
+}
+
+function toggle_tile () {
+  if(wm.curr_active_window.mode === 'f') {
+    wm.tile();
+  } else {
+    wm.untile(wm.curr_active_window);
+  }
+}
+
+function default_tile() {
+  if(!wm.isMeta)
+    return;
+  for(var i = 0; i < wm.windows.length; i++){
+    if(wm.windows[i].mode === 'f'){
+      tile_graph.add(null, wm.windows[i], null);
+    }
+  }
+}
+//1 is right
+function tile_right(){
+  //console.log("tile_right is working");
+  wm.bigTile(wm.curr_active_window, 1);
+}
+// 2 is right
+function tile_left(){
+  wm.bigTile(wm.curr_active_window, 2);
+}
+//3 is up
+function tile_up(){
+  wm.bigTile(wm.curr_active_window, 3);
+}
+//4 is down
+function tile_down(){
+  wm.bigTile(wm.curr_active_window, 4);
+}
+function toggle_float () {
+  if(wm.curr_active_window && wm.curr_active_window.mode === 't' && wm.isMeta){
+    wm.untile(wm.curr_active_window);
+  }else if(wm.curr_active_window && wm.curr_active_window.maximised && wm.isMeta){
+    wm.curr_active_window.maximise(); //This call un-maximises a window, in case you press 'f' to float a maximised window
+  }
+}
+
+function select_all_wm () {
+  for(var i = 0; i < wm.windows.length; i++){
+    wm.select(wm.windows[i]);
+  }
+}
+
+function maximize_window () {
+  if(wm.curr_active_window)
+    wm.curr_active_window.maximise();
+}
+
+function help () {
+  apps.settings.open(null, 'shortcuts');
+}
+
+function session_test(){
+  //console.log("sessions test function is working");
+  apps.session.send_object(wm.session_object);
+  console.log("object send");
+  console.log(wm.session_object);
+}
+function session_test_get(){
+  apps.session.get_object();
+  console.log("received session object");
+  console.log(apps.session.saved_session);
+  //console.log(apps.session.saved_session.four);
+  //console.log(apps.session.saved_session.two);
+  for(var ii = 0; ii < wm.windows.length; ii++){
+      wm.windows[ii].setSize(apps.session.saved_session.siz[ii].width,apps.session.saved_session.position[ii].height,10,false);
+      wm.windows[ii].setPosition(apps.session.saved_session.position[ii].left, apps.session.saved_session.position[ii].top, false);
+  }
+}
+function set_session(){
+  //rebuild the stuff here.
+  wm.set_session();
+  for(var ii = 0; ii < wm.windows.length; ii++){
+      console.log("size");
+      console.log(wm.session_object.siz[ii].width);
+      console.log("position");
+      console.log(wm.session_object.position[ii]);
+  } 
+}
+
+function secret_mode () {
+  if(USER_ADMIN != 'true')
+    return;
+  alertify.prompt('If you are not an admin, keep out!', function(e, str) {
+    if(e) {
+      if(str == 'edit') {
+        apps.editor.open_file('admin', 'admin', null, true);
+      }else if(str == 'term') {
+        apps.terminal.open('nondocker', 'private', 'arch');
+      }
+    }
+  });
+}
+
+function open_terminal () {
+  if(CONF.terminal == "docker")
+    apps.terminal.open('docker', 'private', 'arch');
+  else
+    apps.terminal.open('nondocker', 'private', 'arch');
+}
+
+///////////////////////////////Menu Stuff///////////////////////////////
+
+$( document ).ready(function() {
+  $( '#dl-menu' ).multLvlMenu({
+    height: 800
+  });
+	//$('html').disableSelection();
+});
+
+</script>
+
+</head>
+
+<body>
+<!-- Multilevel Menu -->
+<div id="dl-menu" class="dl-menuwrapper">
+<button class="dl-trigger" id='button-trigger'><img id='img-button' src="img/menubtn.png" height="40" width="40"></button>
+	<ul class="dl-menu" id="sys_menu">
+		<li>
+			<a href="#">Apps</a>
+			<ul class="sub_menu" id="apps_menu">
+				<li>
+					<a class="backbtn" href="#">Back</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+app_arr = [];
+for(var appname in app_list) {
+  app_arr.push(app_list[appname]);
+}
+app_arr.sort(function (a, b) {
+  return a.menu_order - b.menu_order;
+});
+
+//add app menus
+for(var i = 0; i < app_arr.length; i++) {
+  app = app_arr[i];
+  if(app.menu == "apps")
+    $("#apps_menu").html($("#apps_menu").html() + '<li><a href="#" onclick="apps[\'' + app.name + '\'].open();">' + app.title + '</a></li>');
+  else if(app.menu == "main")
+    $("#sys_menu").html($("#sys_menu").html() + '<li><a href="#" onclick="apps[\'' + app.name + '\'].open();">' + app.title + '</a></li>');
+}
+$("#sys_menu").html($("#sys_menu").html() + '<li><a href="/project">Projects</a></li><li><a href="/logout">Logout</a></li>');
+
+if(CONF.terminal == "docker") {
+  $("#apps_menu").html($("#apps_menu").html() + '<li><a href="#">Terminal</a><ul class="sub_menu"><li><a class="backbtn" href="#">Back</a></li><li><a href="#">Private Terminal</a><ul class="sub_menu" id="term_menu"><li><a class="backbtn" href="#">Back</a></li><li><a href="#" onclick="apps.terminal.open(\'docker\', \'private\', \'arch\');">Archlinux Terminal</a></li><li><a href="#" onclick="apps.terminal.open(\'docker\', \'private\', \'ubuntu\');">Ubuntu Terminal</a></li></ul></li><li><a href="#">Shared Terminal</a><ul id="shared_terminal_holder" class="sub_menu"><li><a class="backbtn" href="#">Back</a></li><ul id="shared_terminal_link_holder" class="sub_menu"><li><a class="backbtn" href="#">Back</a></li></ul></ul></li></ul></li>');
+} else {
+  $("#apps_menu").html($("#apps_menu").html() + '<li><a href="#" onclick="apps.terminal.open(\'nondocker\', \'private\', \'arch\');">Terminal</a></li>');
+}
+</script>

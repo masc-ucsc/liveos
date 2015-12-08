@@ -1,0 +1,10 @@
+{
+  "name": "livesim",
+  "title": "LiveSim",
+  "main_class": "livesim_app",
+  "js_files": ["livesim.js", "livesim_settings.js", "livesim_conf.js"],
+  "css_files": ["livesim.css"],
+  "menu": "apps",
+  "menu_order": 2,
+  "shortcut": "alt e"
+}
