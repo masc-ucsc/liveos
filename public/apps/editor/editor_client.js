@@ -356,18 +356,18 @@ function editor (file_id, index, file_name, ec, line_number, admin_mode) {
 		self.socket.emit("save", {admin_mode: self.admin_mode});
 	};
 
-  //Watch for ESESC
+  //Watch for livesim
   this.toggle_watch = function () {
     if(self.do_watch) {
       self.do_watch = false;
-      self.watch_io.esesc.disconnect();
-      self.watch_io.esesc = null;
-			self.menu_items.watch_esesc.title.nodeValue = "Watch for LiveSim";
+      self.watch_io.livesim.disconnect();
+      self.watch_io.livesim = null;
+			self.menu_items.watch_livesim.title.nodeValue = "Watch for LiveSim";
     } else {
       self.do_watch = true;
-			self.menu_items.watch_esesc.title.nodeValue = "Unwatch LiveSim";
-      self.watch_io.esesc = io.connect(":" + PORTS.esesc + "/esesc", {"force new connection": true, query: $.param({token: TOKEN})});
-      self.watch_io.esesc.on("status", function (obj) {
+			self.menu_items.watch_livesim.title.nodeValue = "Unwatch LiveSim";
+      self.watch_io.livesim = io.connect(":" + PORTS.livesim + "/livesim", {"force new connection": true, query: $.param({token: TOKEN})});
+      self.watch_io.livesim.on("status", function (obj) {
         if(obj.project_id != PROJECT_ID)
           return;
         if(obj.message == "recompiling" || obj.message == "simulating" || obj.message == "simulation_stopped" || obj.message == "simulation_done") {
@@ -389,8 +389,8 @@ function editor (file_id, index, file_name, ec, line_number, admin_mode) {
   };
 
   this.trigger_watch = function () {
-    //running live ESESC
-    self.watch_io.esesc.emit("run", {project_id: PROJECT_ID});
+    //running live livesim
+    self.watch_io.livesim.emit("run", {project_id: PROJECT_ID});
   };
 
   //Watch for LaTeX
@@ -471,8 +471,8 @@ function editor (file_id, index, file_name, ec, line_number, admin_mode) {
 		self.menu_items.save =	this.app_window.add_menu_item("Save", "img/save.png", "icon", this.app_window.menu, this.save_func);
 		self.menu_items.people =	this.app_window.add_menu_item("People", "img/people.png", "icon", this.app_window.menu, null);
     self.menu_items.revisions = this.app_window.add_menu_item("View Revisions", "", "title", this.app_window.menu, this.open_revision_settings);
-		if(PORTS.esesc)
-      self.menu_items.watch_esesc =	this.app_window.add_menu_item("Watch for LiveSim", "", "title", this.app_window.menu, this.toggle_watch);
+		if(PORTS.livesim)
+      self.menu_items.watch_livesim =	this.app_window.add_menu_item("Watch for LiveSim", "", "title", this.app_window.menu, this.toggle_watch);
 		self.menu_items.watch_latex =  this.app_window.add_menu_item("Watch for LaTeX", "", "title", this.app_window.menu, this.toggle_latex_watch);
     if(PORTS.beautifier)
       self.menu_items.watch_beautifier =  this.app_window.add_menu_item("Watch for Beautifier", "", "title", this.app_window.menu, this.toggle_beautifier_watch);
