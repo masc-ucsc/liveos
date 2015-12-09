@@ -46,8 +46,8 @@ correct names and file locations.
 steps 3 to 5. Then, modify *controller.json* setting host to the worker machine name/IP
 setting server to the LiveOS machine and number of cores to CPU cores available. In case
 the worker machine is the same machine as the web server and you are running the worker
-node in the same run directory that you have done step 6 in, "is_local" should be 1 otherwise
-0. Make sure nodejs and npm are installed. Then run the following in the run directory:
+node in the same run directory that you have done step 6 in, "is_local" should be "1" otherwise
+"0". Make sure nodejs and npm are installed. Then run the following in the run directory:
 ```
 sudo npm install -g forever
 npm install
